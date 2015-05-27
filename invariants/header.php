@@ -1,4 +1,4 @@
-	<header>	
+	<header id="Header">	
 		<article id="log">
 			<p>
 				<a href="../accueil/accueil.php">
