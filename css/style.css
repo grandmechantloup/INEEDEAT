@@ -1,0 +1,20 @@
+/***************************************************propriétés de la police **********************************************/
+body
+{
+	font-family:Verdana, Arial, serif;
+	font-size:0.7em;
+	background-color: white;
+}
+header
+{
+	width:1200px;
+	margin:auto;
+}
+
+/***************************************************propriétés visuels ***************************************************/
+#log, #search_bar, section, section article, section aside, .complement_connection
+{
+	display:inline-block;
+	background-color: red;
+}
+

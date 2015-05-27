@@ -1,0 +1,16 @@
+fieldset
+{
+	width: 40%;
+	display: inline-block;
+	margin-top: 25px;
+    background-color: rgba(223, 232, 226 , 0.8);
+	opacity: 0,6;
+
+}
+body
+{
+
+	background: url("../images/fruits_et_legumes.jpeg") fixed no-repeat center;
+	background-size: cover;
+    background-
+}

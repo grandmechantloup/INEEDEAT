@@ -4,7 +4,7 @@
 
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="style_header.css">
+		<link rel="stylesheet" type="text/css" href="../css/invariants.css">
 		
 
 	</head>

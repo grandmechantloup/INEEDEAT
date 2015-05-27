@@ -1,13 +1,9 @@
-img
+fieldset
 {
-	border: solid;
-	border-width: 2px;
-	position: 
-}
-
-.info
-{
-	position: relative;
-	left: 200px;
 	
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	background-color: rgba(223, 232, 226 , 0.8);
+    opacity: 0,6;
 }
