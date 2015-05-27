@@ -66,5 +66,15 @@ $erreur = "le fichier que vous avez chargé pose problème";
 header('location:http://localhost/APP-informatique/formulaires/annonce.php?erreur=' .$erreur);
 }
 ?>
+<?php
+$Imagebase = "C:/Applications/MAMP/htdocs/APP-informatique/formulaires/image/{$name[0]}.{$extension_upload}"
+$NouvelleImage = imagecreatefromjpeg ($Imagebase);
+$TailleImage = getimagesize ($Imagebase$Imagebase);
+$TailleImage = getimagesize ($Imagebase);
+$ImageEnCouleurs = imagecreatetruecolor(800, 600);
+imagecopyresampled($NouvelleImage, $ImageDepart, $CoordonneeXduPointdeDestination, $CoordonneeYduPointdeDestination, $CoordonneeXduPointSource, $CoordonneeYduPointSource, $NouvelleLargeur, $NouvelleHauteur, $LargeurImageDepart, $HauteurImageDepart);
+
+?>
+
 
 
