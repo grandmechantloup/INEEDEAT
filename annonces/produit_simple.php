@@ -7,7 +7,7 @@
 	 <?php echo $donnees['Region']; ?>
 	</p>
 	<p>
-		
+
 	<?php echo $donnees['Categorie']; ?>
 	</p>
 	<p>
@@ -16,3 +16,4 @@
 	</p>
 </article>
 </a>
+qzerzert
