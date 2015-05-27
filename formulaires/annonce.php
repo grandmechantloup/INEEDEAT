@@ -14,11 +14,12 @@
 
 <p>
 
-Catégorie : <select name="Type">
+Type : <select name="Type">
     <option value="Fruit">Fruit</option>
     <option value="Legume">Legume</option>
 	</select> </br></br>
-Article : <input type="text" name="Produit" placeholder="tomate,banane,.." /> </br> </br> 
+Catégorie : <input type="text" name="categorie" placeholder="Tomate,Banane,.." /> </br></br>
+Variété :   <input type="text" name="variété" placeholder="Coeur de boeuf,Cavendish,.." /> </br></br> 
 Region : <select name="Region">
     <option value="Alsace">Alsace</option>
     <option value="Aquitaine">Aquitaine</option>
@@ -45,14 +46,12 @@ Region : <select name="Region">
   
 	</select> </br></br>
 Prix/kg : <input type="text" name="Prix" size="4" /> €/kg  Quantité : <input type="text" name="Quantite" size="4" /> kg </br> </br>
-Titre de l'annonce : <input type="text" name="Nom" /> </br> </br> 
-Texte de l'annonce: <input type="text" name="Descriptif" /> </br> </br>
-	 <label for="mon_fichier">Fichier (tous formats | max. 1 Mo) :</label><br />
+Titre de l'annonce : <input type="text" name="Titre" /> </br> </br>
+Texte de l'annonce: <input type="text" name="Descriptif" /> </br></br>
+	 <label for="mon_fichier">Fichier (tous formats | max. 1 Mo) :</label></br>
      <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
      <input type="file" name="mon_fichier" id="mon_fichier" /> 
-     <script>
-
-     Valider ma nouvelle annonce <input type="submit" name="valider"/> 
+Valider ma nouvelle annonce <input type="submit" name="valider"/> 
      </fieldset>
 
 
