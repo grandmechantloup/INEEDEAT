@@ -14,13 +14,13 @@
 
 <p>
 
-Type : <select name="Type">
+Type : <select name="Type" required>
     <option value="Fruit">Fruit</option>
     <option value="Legume">Legume</option>
 	</select> </br></br>
-Catégorie : <input type="text" name="categorie" placeholder="Tomate,Banane,.." /> </br></br>
-Variété :   <input type="text" name="variété" placeholder="Coeur de boeuf,Cavendish,.." /> </br></br> 
-Region : <select name="Region">
+Catégorie : <input type="text" name="categorie" placeholder="Tomate,Banane,.." required/> </br></br>
+Variété :   <input type="text" name="variété" placeholder="Coeur de boeuf,Cavendish,.." required/> </br></br> 
+Region : <select name="Region" required>
     <option value="Alsace">Alsace</option>
     <option value="Aquitaine">Aquitaine</option>
     <option value="Auvergne">Auvergne</option>
@@ -45,8 +45,8 @@ Region : <select name="Region">
     <option value=">Rhône-Alpes">Rhône-Alpes</option>
   
 	</select> </br></br>
-Prix/kg : <input type="text" name="Prix" size="4" /> €/kg  Quantité : <input type="text" name="Quantite" size="4" /> kg </br> </br>
-Titre de l'annonce : <input type="text" name="Titre" /> </br> </br>
+Prix/kg : <input type="text" name="Prix" size="4" required/> €/kg  Quantité : <input type="text" name="Quantite" size="4" required/> kg </br> </br>
+Titre de l'annonce : <input type="text" name="Titre" required/> </br> </br>
 Texte de l'annonce: <input type="text" name="Descriptif" /> </br></br>
 	 <label for="mon_fichier">Fichier (tous formats | max. 1 Mo) :</label></br>
      <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />

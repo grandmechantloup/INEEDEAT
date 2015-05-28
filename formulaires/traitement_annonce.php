@@ -59,7 +59,7 @@ $req->execute(array(
 $req = $bdd -> query('SELECT MAX(id_annonce) FROM annonces');
 $name = $req->fetch();
 
-$nom = "image/{$name[0]}.{$extension_upload}";
+$nom = "Image/{$name[0]}.{$extension_upload}";
 $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nom);
 
 }
@@ -96,7 +96,7 @@ $LienImageNews = 'image/'.$NomImageExploitable.'.'.$ExtensionPresumee;
  
                                              
         }
-}
+}*/
 ?>
 
 
