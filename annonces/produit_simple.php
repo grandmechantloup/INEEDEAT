@@ -4,7 +4,7 @@
 	<p> <img src=<?php echo $nom_image ?> class="image_annonce"/> <p>
 	<p>
 	<?php echo $donnees['Titre']; ?> <br/>
-	 <?php echo $donnees['Region']; ?>
+	 <?php echo $donnees['Code_postal']; ?>
 	</p>
 	<p>
 	<?php echo $donnees['Categorie']; ?>
@@ -15,3 +15,4 @@
 	</p>
 </article>
 </a>
+

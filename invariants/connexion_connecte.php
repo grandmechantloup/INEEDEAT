@@ -13,6 +13,6 @@
 		</a>
 	</p>
 	<p>
-		<a href="../invariants/traitement.php">Déconnexion</a>
+		<a href="../invariants/traitement_deconnexion.php">Déconnexion</a>
 	</p>
 </article>

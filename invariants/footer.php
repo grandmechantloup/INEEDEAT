@@ -9,7 +9,7 @@
 
 	</head>
 
-<footer>
+<footer id="Footer">
 	
 	 		<div id="foot">
 			<span id="Association">
