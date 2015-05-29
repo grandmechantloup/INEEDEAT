@@ -28,7 +28,6 @@
 		<nav class="nav_header">
 			<ul class="menu">
 				<li><a href="../offres/offres.php">Offres</a></li>
-				<li><a href="#">Demandes</a></li>
 				<li><a href="../formulaires/annonce.php">Poser une annonce</a></li>
 				<li><a href="../compte/mes_annonces.php">Mes annonces</a></li>
 			</ul>

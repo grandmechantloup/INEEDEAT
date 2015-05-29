@@ -25,7 +25,14 @@ session_start();
 				<strong><h1>Ventes en cours</h1></strong>
 				<?php
 				include("../bdd/connexion.php");
-				$reponse=$bdd->prepare('SELECT * FROM annonces WHERE id_utilisateur = ? ORDER BY id_annonce DESC');
+				$reponse=$bdd->prepare('SELECT a.Titre, c.Categorie, v.Variete, a.Code_postal, a.Prix, a.Quantite, a.Date_publication, a.id_annonce
+										FROM annonces a
+										INNER JOIN categorie c
+										ON c.id_categorie=a.id_categorie
+										INNER JOIN varietes v
+										ON v.id_categorie=c.id_categorie 
+										WHERE a.id_utilisateur = ? 
+										ORDER BY id_annonce DESC');
 				$reponse->execute(array($_SESSION['id_utilisateur']));
 				while ($donnees=$reponse->fetch())
 				{
