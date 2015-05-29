@@ -1,3 +1,9 @@
+<?php function IsEmail($email)
+    {
+        $value = preg_match('/^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9_](?:[a-zA-Z0-9_\-](?!\.)){0,61}[a-zA-Z0-9_-]?\.)+[a-zA-Z0-9_](?:[a-zA-Z0-9_\-](?!$)){0,61}[a-zA-Z0-9_]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/', $email);
+        return (($value === 0) || ($value === false)) ? false : true;
+    }
+?>    
 <?php include("../bdd/connection.php"); ?>
 <?php if(empty($_POST['Email']) OR empty($_POST['Pseudo']) OR empty($_POST['M_d_P']) OR empty($_POST['Verif_M_d_P'])){
 header('location: ../formulaires/inscription.php');

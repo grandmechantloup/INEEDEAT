@@ -13,6 +13,8 @@
 <?php include("../invariants/header.php"); ?>
 		</header>
 
+
+
        <footer id="Footer">
 <?php include("../invariants/footer.php"); ?>
 	  </footer>

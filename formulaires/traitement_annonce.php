@@ -35,17 +35,17 @@ if($erreur=="aucune")
 {
 
 
-$req = $bdd->prepare('INSERT INTO annonces (Prix, Quantite, Description, Auteur, Code_postal, Date_publication, Extension_upload) VALUES (:Prix, :Quantite, :Description, :Auteur, :Code_postal, NOW(), :Extension_upload)', 'INSERT INTO categorie (categorie) VALUES (:categorie)', 'INSERT INTO variete (variete) VALUES (:variete)');
+$req = $bdd->prepare('INSERT INTO annonces (prix, quantite, titre, description, auteur, code_postal, Extension_upload) VALUES (:Prix, :Quantite, :Titre, :Description, :Auteur, :Code_postal, NOW(), :Extension_upload)', 'INSERT INTO categorie (categorie) VALUES (:categorie)', 'INSERT INTO variete (variete) VALUES (:variete)');
 $req->execute(array(
 	
-	'variete' => $_POST['variete'],
-    'categorie' => $_POST['categorie'],
-    'Prix' => $_POST['prix'],
-    'Quantite' => $_POST['quantite'],
-    'Titre' => $_POST['titre'],
-    'Description' => $_POST['Description'],
-  	'Auteur' => $_SESSION['pseudo'],
-  	'Code_postal' => $_POST['code_postal'],
+	'variete' => $_POST['Variete'],
+    'categorie' => $_POST['Categorie'],
+    'prix' => $_POST['Prix'],
+    'quantite' => $_POST['Quantite'],
+    'titre' => $_POST['Titre'],
+    'description' => $_POST['Description'],
+  	'auteur' => $_SESSION['Pseudo'],
+  	'code_postal' => $_POST['Code_postal'],
   	'Extension_upload' => $extension_upload
   	));
 
@@ -69,7 +69,7 @@ header('location:http://localhost/INEEDEAT/formulaires/annonce.php?erreur=' .$er
 ?>
 
 <?php
-
+/*
 $chemin  = "http://localhost/INEEDEAT/Image/{$name[0]}.{$extension_upload}";
 $x_c     = 640; // Taille de l'image
 $y_c     = 480;
@@ -122,7 +122,7 @@ imagefilledrectangle($image,0,0,$x_c,$y_c,$color);
 imagecopyresampled($image,$image_new,$x_p,$y_p,0,0,$x_t,$y_t,$size[0],$size[1]);
 imagejpeg($image,NULL,$qualite);
 
-?>
-?>
+*/?>
+
 
 
