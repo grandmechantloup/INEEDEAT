@@ -8,25 +8,24 @@
 <body>
 <?php include("../invariants/header.php"); ?>
 <h1>Nous contacter</h1>
-<p>Sur cette page vous pourrez si vous le désirez intéragir avec nous, vous pouvez nous faire parvenir vos impressions, vos remarques, vos suggestions ou encore de nous renseigner sur les problèmes que vous avez pu rencontrer au cours de votre navigation sur le site.</p>
+<p>Sur cette page vous pouvez si vous le désirez intéragir avec nous, vous pouvez également nous faire parvenir vos impressions, vos remarques, vos suggestions ou encore nous renseigner sur les problèmes que vous avez pu rencontrer au cours de votre navigation sur le site.</p>
 <p>Toute remarque est la bienvenue, et nous nous engageons à lire vos messages, à corriger sous les plus brefs délais les problèmes du site, et nous sommes à l'écoute pour toute amélioration du site.</p>
 
+Nous sommes à votre écoute!
+<form id="contact" method="post" action="traitement_nous_contacter.php">
+  <fieldset><legend>Vos coordonnées</legend>
+    <p><label for="nom">Nom :</label><input type="text" id="nom" name="nom" required/></p>
+    <p><label for="email">Email :</label><input type="text" id="email" name="email" size='30'required/></p>
+  </fieldset>
+ 
+  <fieldset><legend>Votre message :</legend>
+    <p><label for="objet">Objet :</label><input type="text" id="objet" name="objet" required/></p>
+    <p><label for="message">Message :</label></br><textarea id="message" name="message" tabindex="4" cols="50" rows="10" required></textarea></p>
+  </fieldset>
+ 
+  <div style="text-align:center;"><input type="submit" name="envoi" value="Envoyer le message !" /></div>
+  </form>
 
-<form method="post" action="traitement_nous_contacter.php">
-   <p>
-       <label for="contact">
-       Nous sommes à votre écoute!
-       </label>
-       <br />
-       <p><label for="email">Email :</label><input type="text" id="email" name="email" size="30" required/></p>
-       <p><label for="objet">Objet :</label><input type="text" id="objet" name="objet" size="30" required/></p>
-       <textarea name="message" id="message" rows="20" cols="100">
-       
-       </textarea>       
-   </p>
-</form>
-
-<input type="submit" name="envoi" value="Envoyer" />
 <?php include("../invariants/footer.php"); ?>
 </body>
 </html>
