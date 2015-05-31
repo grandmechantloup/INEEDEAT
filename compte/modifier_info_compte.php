@@ -14,7 +14,7 @@
 		$req->execute(array($_SESSION['id_utilisateur']));
 		$donnees=$req->fetch();
 		?>
-		<form action="../compte/traitement_modifier_info_compte.php" method="POST">
+		<form action="../compte/traitement_modifier_info_compte1.php" method="POST">
 			Pseudo : <?php echo $donnees['Pseudo'] ?> </br>
 			changer le pseudo : <input type="text" name="nouveau_pseudo" placeholder="Nouveau pseudo"/> </br>
 			Mot de passe : ****** </br>
