@@ -33,13 +33,19 @@ $extension_upload = strtolower(  substr(  strrchr($_FILES['image']['name'], '.')
 
 if($erreur=="aucune")
 {
+$req = $bdd->prepare('INSERT INTO categorie (categorie) VALUES (:categorie)');
+$req->execute(array(
+    
+    'categorie' => $_POST['Categorie']));
 
-
+$req = $bdd->prepare('INSERT INTO variete (variete) VALUES (:variete)');
+$req->execute(array(
+    
+    'variete' => $_POST['Variete']));
+    
 $req = $bdd->prepare('INSERT INTO annonces (prix, quantite, titre, description, auteur, code_postal, Extension_upload) VALUES (:Prix, :Quantite, :Titre, :Description, :Auteur, :Code_postal, NOW(), :Extension_upload)', 'INSERT INTO categorie (categorie) VALUES (:categorie)', 'INSERT INTO variete (variete) VALUES (:variete)');
 $req->execute(array(
 	
-	'variete' => $_POST['Variete'],
-    'categorie' => $_POST['Categorie'],
     'prix' => $_POST['Prix'],
     'quantite' => $_POST['Quantite'],
     'titre' => $_POST['Titre'],
@@ -58,13 +64,13 @@ $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nom);
 }
 else
 {
-header('location:http://localhost/INEEDEAT/formulaires/annonce.php?erreur=' .$erreur);
+header('location:../formulaires/annonce.php?erreur=' .$erreur);
 }
 }
 else
 {
 $erreur = "le fichier que vous avez chargé pose problème";
-header('location:http://localhost/INEEDEAT/formulaires/annonce.php?erreur=' .$erreur);
+header('location:http:../formulaires/annonce.php' .$erreur);
 }
 ?>
 
