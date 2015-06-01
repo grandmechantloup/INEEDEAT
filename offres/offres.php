@@ -43,7 +43,7 @@
 							  INNER JOIN categorie c
 							  ON c.id_categorie=a.id_categorie
 							  INNER JOIN varietes v
-							  ON v.id_categorie=c.id_categorie
+							  ON v.id_categorie=a.id_categorie
 							  ORDER BY a.id_annonce 
 							  DESC LIMIT '.$premiere_annonce_affichee.', 5');
 		while($donnees=$reponse->fetch())

@@ -57,10 +57,15 @@
 					$req=$bdd->prepare('SELECT * FROM utilisateurs WHERE id_utilisateur=?');
 					$req->execute(array($_SESSION['id_utilisateur']));
 					$donnees=$req->fetch();
-					echo $donnees['Num_rue'].' '.$donnees['Adresse']; ?> <br/>
-					<?php echo $donnees['Ville']; ?> <br/>
-					<?php echo $donnees['Region']; ?> <br/>
-					<?php echo $donnees['Code_postal'];	?> <br/>
+					?>
+					<form method="POST" action="">
+						<?php
+						echo $donnees['Num_rue'].' '.$donnees['Adresse']; ?><input type="text" name="nouveau_num_rue" placeholder="Numéro" size="3"/> <input type="text" name="nouvelle_adresse" placeholder="Adresse"/> <br/>
+						<?php echo $donnees['Ville']; ?> <input type="text" name="nouvelle_ville" placeholder="Ville"/><br/>
+						<?php echo $donnees['Region']; ?> <input type="text" name="nouvelle_region" placeholder="Région"/><br/>
+						<?php echo $donnees['Code_postal'];	?><input type="text" name="nouveau_code_postal" placeholder="Code postal"/> <br/>
+						<input type="submit" value="Valider"/>
+					</from>
 				</p>	
 		<?php
 		}
