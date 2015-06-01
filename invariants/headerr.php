@@ -10,10 +10,10 @@
 	</head>
 
 	<body>
-		<<?php include ("body.php") ?>
+		
 		<header id="Header">
 
-						<img id="Logo" src="logo_i_need_eat_miniature.png">
+						<img id="Logo" src="../images/logo_i_need_eat_miniature.png">
 
 			<div id="Recherche">
 
@@ -22,6 +22,21 @@
 						<input type="submit" value="Rechercher">
 
 			</div>
+
+	<section>
+					<?php
+						if(isset($_SESSION['pseudo']))
+						{
+							include("../invariants/connexion_connecte.php");
+						}
+						else
+						{
+						include("../invariants/connexion_non_connecte.php");
+						}
+						?>	
+
+				
+	</section>
 
 			<section id="Connexion">
 				<div id="Identifiant">
@@ -46,12 +61,12 @@
 						<a href="connect.php" class="myButton"> Connectez-vous!          </a>
 						
 					<br>
-						<a href="formulaire.php"> Pas encore Inscrit?					</a>
+						<a href="../formulaires/inscription.php"> Pas encore Inscrit?					</a>
 				</div>
 			</section>
 			<br>
 			<br>
-			<nav id="navigation">
+			<nav class="navigation">
 				<table>
 					<td> <a href="Offres.html"> Offres 									</a>	</td>
 					<td> <a href="PoserAnnonces.html"> Proposer une annonce 					</a>	</td>
