@@ -1,3 +1,8 @@
+
+<!--
+
+<<<<<<< Updated upstream
+
 	<header id="Header">	
 		<article id="log">
 			<p>
@@ -33,3 +38,51 @@
 			</ul>
 		</nav>
 	</header>
+
+-->
+
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/invariants.css">
+		
+
+	</head>
+
+	<body>
+		<header id="Header">
+
+						<img id="Logo" src="../images/logo_i_need_eat_miniature.png">
+
+			<div id="Recherche">
+					
+					<h2> Vente et échange de fruits et légumes frais </h2>
+					
+					  	<input type="search" name="Recherche" id="Barre" placeholder="Fruits,Légumes..." size="60"/>
+						<input type="submit" value="Rechercher">
+
+			<section>
+					<?php
+						if(isset($_SESSION['pseudo']))
+						{
+							include("../invariants/connexion_connecte.php");
+						}
+						else
+						{
+						include("../invariants/connexion_non_connecte.php");
+						}
+						?>	
+
+				
+			</section>
+			<br>
+			<br>
+			<nav id="navigation">
+				<table>
+					<td> <a href="Offres.html"> Offres 									</a>	</td>
+					<td> <a href="PoserAnnonces.html"> Proposer une annonce 					</a>	</td>
+					<td> <a href="MesAnnonces.html"> Mes Annonces 						</a>	</td>
+				</table>				
+			</nav>
+		</header>
