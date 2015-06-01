@@ -8,7 +8,7 @@
 </head>
 <body>
 	<header>
-		<?php/* include("../invariants/header.php");*/?>
+		<?php include("../invariants/header.php");?>
 	</header>
 <fieldset class="info">
 	<section>
@@ -16,12 +16,16 @@
 			<p><img src="#" alt="#" class="image_produit"/></p>
 		</aside>
 		<article class="info">
-			<?php require("../bdd/connection.php"); ?>
+			<?php require("../bdd/connexion.php"); ?>
 			<h1> 
-				<?php $reponse=$bdd->prepare('SELECT Titre, Region, Prix, Quantite, Texte, Pseudo, Categorie, Date_publication, id_annonce
-											  FROM annonces AS a
-											  INNER JOIN utilisateurs AS u
+				<?php $reponse=$bdd->prepare('SELECT c.Categorie, v.Variete, a.Titre, u.Region, a.Prix, a.Quantite, a.Description, u.Pseudo, a.Date_publication, a.id_annonce
+											  FROM annonces a
+											  INNER JOIN utilisateurs u
 											  ON u.id_utilisateur=a.id_utilisateur
+											  INNER JOIN categorie c
+											  ON c.id_categorie=a.id_categorie
+											  INNER JOIN varietes v
+											  ON v.id_categorie=c.id_categorie
 											  WHERE id_annonce=?');
 				$reponse->execute(array($_GET['id_annonce']));
 				$donnees=$reponse->fetch();
@@ -42,13 +46,13 @@
 		<article>
 			<p> 
 				<strong>description</strong> : 
-				<?php echo $donnees['Texte']; ?>
+				<?php echo $donnees['Description']; ?>
 			</p>
 		</article>
 		<article>
 			<p>
 				détail du <strong>produit</strong> : 
-				<?php echo $donnees['Categorie']; ?>
+				<?php echo $donnees['Categorie']; ?> > <?php echo $donnees['Variete']; ?>
 			</p>
 		</article>
 		<div class="reglement">
@@ -57,10 +61,11 @@
 			<p> <a href="#"> <input type="button" value="Echanger"/> </a> </p>
 
 		</div>
-		<?php $reponse->closeCursor ?>
+		<?php $reponse->closeCursor(); ?>
 	</section>
 </fieldset>
-
-	<include("../invariants/footer.php")
+<?php
+	include("../invariants/footer.php");
+	?>
 </body>
 </html>

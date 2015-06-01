@@ -1,8 +1,3 @@
-
-<!--
-
-<<<<<<< Updated upstream
-
 	<header id="Header">	
 		<article id="log">
 			<p>
@@ -38,9 +33,7 @@
 			</ul>
 		</nav>
 	</header>
-
--->
-
+	<!--
 <html>
 
 	<head>
@@ -85,4 +78,4 @@
 					<td> <a href="MesAnnonces.html"> Mes Annonces 						</a>	</td>
 				</table>				
 			</nav>
-		</header>
+		</header>  -->
