@@ -102,6 +102,7 @@
 					Pseudo : <?php echo $donnees['Pseudo'] ?> <br/>
 					Email : <?php echo $donnees['Email'] ?> <br/>
 					Mot de passe : ****** <br/>
+					<a href="../compte/Modifier_info_compte.php"><input type="button" value="modifier"/></a>
 				</p>
 			</section>
 		<?php

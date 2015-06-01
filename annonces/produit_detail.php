@@ -7,9 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style_produit_detail.css">
 </head>
 <body>
-	<header>
 		<?php include("../invariants/header.php");?>
-	</header>
 <fieldset class="info">
 	<section>
 		<aside>

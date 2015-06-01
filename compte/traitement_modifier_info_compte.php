@@ -25,6 +25,14 @@ if(isset($_POST['ancien_mdp']) AND $_POST['ancien_mdp']==$donnees['Mdp'])
 		$reponse->closeCursor();
 	}
 }
-
+if(isset($_POST['nouvel_email']) AND $_POST['nouvel_email']!=NULL)
+{
+		$reponse1=$bdd->prepare('UPDATE utilisateurs SET Email=:nouvel_email WHERE id_utilisateur=:id_utilisateur');
+		$reponse1->execute(array(
+			'nouvel_email'=>$_POST['nouvel_email'],
+			'id_utilisateur'=>$_SESSION['id_utilisateur']
+		));
+		$reponse1->closeCursor();
+	}
 header('location:../compte/mon_compte.php');
 ?>
