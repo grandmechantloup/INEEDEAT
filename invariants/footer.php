@@ -36,9 +36,9 @@
 
 				<h3> Aides et services </h3>	
 
-				<p id="Aide"> <a href="../APP-informatique/aide_et_service.php"> Aide et service 								</a>	</p>
-				<p id="SignA"><a href="signaler_un_abus.php">	Signaler un abus			</a>	</p>
-				<p id="Contact"><a href="nous_contacter.php"> Nous contacter 	 		</a>	</p>
+				<p id="Aide"> <a href="../invariants/pages_du_footer/aide_et_service.php"> Aide et service 								</a>	</p>
+				<p id="SignA"><a href="../invariants/pages_du_footer/signaler_un_abus.php">	Signaler un abus			</a>	</p>
+				<p id="Contact"><a href="../invariants/pages_du_footer/nous_contacter.php"> Nous contacter 	 		</a>	</p>
 
 			</span>
 		</div>

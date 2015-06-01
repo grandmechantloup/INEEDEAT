@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -6,8 +6,7 @@
 	<title>Aide et service</title>
 </head>
 <body>
-<<?php include ("header.php") ?>>
-
+<?php include ("../invariants/header.php") ?>
 
 <h1>AIDE ET SERVICES</h1>
 
@@ -48,7 +47,7 @@
 
 <h2>Si vous avez une quelquonque remarque, une suggestion pour améliorer le site, merçi de nous écrire un message <a href="nous_contacter.php">içi</a>.</h2>
 
-<<?php include ("footer.php") ?>>
+<?php include ("../footer.php") ?>
 
 </body>
 </html>
