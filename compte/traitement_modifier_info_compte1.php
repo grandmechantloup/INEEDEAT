@@ -17,3 +17,4 @@ if(isset($_POST['nouveau_pseudo']) AND isset($_POST['ancien_mdp']) AND $_POST['a
 		$reponse->closeCursor();
 	}
 }
+?>
