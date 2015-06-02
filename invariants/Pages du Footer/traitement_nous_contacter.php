@@ -43,6 +43,15 @@ if (isset($_POST['envoi']))
 		{
 			$cible = $destinataire;
 		};
+
+		$message = str_replace("&#039;","'",$message);
+		$message = str_replace("&#8217;","'",$message);
+		$message = str_replace("&quot;",'"',$message);
+		$message = str_replace('&lt;br&gt;','',$message);
+		$message = str_replace('&lt;br /&gt;','',$message);
+		$message = str_replace("&lt;","&lt;",$message);
+		$message = str_replace("&gt;","&gt;",$message);
+		$message = str_replace("&amp;","&",$message);
  
 		if (mail($cible, $objet, $message, $headers))
 		{
@@ -58,10 +67,5 @@ if (isset($_POST['envoi']))
 		echo '<p>'.$message_formulaire_invalide.'</p>';
 		$err_formulaire = true;
 	};
-};
- 
-if (($err_formulaire) || (!isset($_POST['envoi'])))
-{
-
 };
 ?>
