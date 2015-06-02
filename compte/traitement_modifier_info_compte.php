@@ -15,7 +15,7 @@ if(isset($_POST['nouveau_pseudo']) AND $_POST['nouveau_pseudo']!=NULL)
 	}
 if(isset($_POST['ancien_mdp']) AND $_POST['ancien_mdp']==$donnees['Mdp'])
 {
-	if(isset($_POST['nouveau_mdp']) AND $_POST['nouveau_mdp']!=NULL AND $_POST['nouveau_mdp']==$_POST['confirmation_mdp'])
+	if(isset($_POST['nouveau_mdp']) AND $_POST['nouveau_mdp']!=NULL AND $_POST['nouveau_mdp']===$_POST['confirmation_mdp'])
 	{
 		$reponse=$bdd->prepare('UPDATE utilisateurs SET Mdp=:nouveau_mdp WHERE id_utilisateur=:id_utilisateur');
 		$reponse->execute(array(

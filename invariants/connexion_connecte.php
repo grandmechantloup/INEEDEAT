@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="connection_connectee.css">
 <fieldset>
 <article>
 	<p>
@@ -10,7 +9,7 @@
 	</a>
 	<p>
 		<a href="../compte/panier.php"> 
-			<img src="../images/panier.png" alt="image du panier" id="panier"/>
+			<img src="../images/images_site/panier.png" alt="image du panier" id="panier"/>
 			<strong>Panier</strong>
 		</a>
 	</p>
