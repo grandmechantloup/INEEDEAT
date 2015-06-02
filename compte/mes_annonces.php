@@ -9,7 +9,7 @@ session_start();
 </head>
 <body>
 	<?php 
-	if(isset($_SESSION['pseudo']))
+	if(isset($_SESSION['id_utilisateur']))
 	{
 		include("../invariants/header.php"); ?>	
 		<nav class="nav_compte">
@@ -25,7 +25,7 @@ session_start();
 				<strong><h1>Ventes en cours</h1></strong>
 				<?php
 				include("../bdd/connexion.php");
-				$reponse=$bdd->prepare('SELECT a.Titre, c.Categorie, v.Variete, a.Code_postal, a.Prix, a.Quantite, a.Date_publication, a.id_annonce
+				$reponse=$bdd->prepare('SELECT a.Titre, c.Categorie, v.Variete, a.Prix, a.Quantite, a.Date_publication, a.id_annonce, a.Extension_upload
 										FROM annonces a
 										INNER JOIN categorie c
 										ON c.id_categorie=a.id_categorie

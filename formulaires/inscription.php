@@ -3,10 +3,9 @@
 	<head>
 
 			<meta charset="utf-8" />
-				<link rel="stylesheet" href="../css/Style_formulaire.css" />
+				<link rel="stylesheet" href="../css/style_formulaire.css" />
 		<title>Formualire d'inscription</title>
 
-	
 	</head>
 
 	<body>

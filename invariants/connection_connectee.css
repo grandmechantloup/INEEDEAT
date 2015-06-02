@@ -1,0 +1,13 @@
+fieldset{
+	
+	position: fixed;
+	right:3%;
+	top: 1%;
+	border:  1px solid #68a0ca;
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	background-color: #a5cc52;
+	border-radius: 6px;
+	width: 15%;
+}
