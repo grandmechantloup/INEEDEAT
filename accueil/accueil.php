@@ -8,6 +8,8 @@
 	</head>
 <body>	
 	<?php include("../invariants/header.php"); ?>
+
+
 	<?php include("../invariants/footer.php"); ?>
 </body>	
 </html>

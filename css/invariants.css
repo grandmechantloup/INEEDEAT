@@ -20,9 +20,7 @@ h2          {
 
 
 table{
-	position: fixed;
-
-	top: 100px;
+	position: relative;
 	left: 5px;
 	right: 5px;
 	display:block;
@@ -36,8 +34,7 @@ table{
     color: #000;
     background: #a5cc52;
     border-radius: 8px;
-    top: 230px;
-	width: 100%;
+    margin-bottom: 20px;
     
 
 }

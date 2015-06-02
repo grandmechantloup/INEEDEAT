@@ -26,7 +26,7 @@
 
 				<h3> A propos </h3>	
 
-				<p id="CGU"> <a href="CGU.php"> CGU 									</a>	</p>
+				<p id="CGU"> <a href="../invariants/pages_du_footer/CGU.php"> CGU 									</a>	</p>
 				<p id="Confident"><a href="ConfidentialitÃ©.php">	Confidentialité		</a>	</p>
 				<p id="MentionL"> <a href="MentionsLÃ©gales.php"> Mentions légales 	 	</a>	</p>
 

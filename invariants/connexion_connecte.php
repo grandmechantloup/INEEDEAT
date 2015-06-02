@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="connection_connectee.css">
+<fieldset>
 <article>
 	<p>
 		Bienvenu <?php echo $_SESSION['pseudo'];
@@ -16,3 +18,5 @@
 		<a href="../invariants/traitement_deconnexion.php">Déconnexion</a>
 	</p>
 </article>
+
+</fieldset>
