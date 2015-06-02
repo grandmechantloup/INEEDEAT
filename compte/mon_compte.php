@@ -29,21 +29,15 @@
 				$req->execute(array($_SESSION['id_utilisateur']));
 				$donnees=$req->fetch();
 				?>
-				<form method="POST" action="">
-					<?php
-					echo 'civilité : '.$donnees['Civilite']; ?>	
-					<select name="Civilite" id="Civilite">
+				<form method="POST" action="../compte/traitement_modifier_info.php">
+					civilité : <select name="Civilite" id="Civilite">
 						<option value="Monsieur">Monsieur</option>
 						<option value="Madame">Madame</option>
 					</select><br/>
-					<?php echo 'Nom : '.$donnees['Nom']; ?>
-					<input type="type" name="nouveau_nom"/><br/>
-					<?php echo 'Prénom : '.$donnees['Prenom']; ?>
-					<input type="text" name="nouveau_prenom"/><br/>
-					<?php echo 'Téléphone : '.$donnees['Tel']; ?>
-					<input type="text" name="nouveau_tel"/><br/>
-					<?php echo 'Date de naissance : '.$donnees['Naissance']; ?>
-					<input type="date" name="nouvelle_naissance"/><br/>
+					Nom : <input type="type" name="nouveau_nom" value="<?=$donnees['Nom']?>"/><br/>
+					Prénom : <input type="text" name="nouveau_prenom" value="<?=$donnees['Prenom']?>"/><br/>
+					Téléphone :	<input type="text" name="nouveau_tel" value="0<?=$donnees['Tel']?>"/><br/>
+					Date de naissance : <input type="date" name="nouvelle_naissance" value="<?=$donnees['Naissance']?>"/><br/>
 					<input type="submit" value="Valider"/>
 				</form>	
 		<?php
@@ -58,12 +52,11 @@
 					$req->execute(array($_SESSION['id_utilisateur']));
 					$donnees=$req->fetch();
 					?>
-					<form method="POST" action="">
-						<?php
-						echo $donnees['Num_rue'].' '.$donnees['Adresse']; ?><input type="text" name="nouveau_num_rue" placeholder="Numéro" size="3"/> <input type="text" name="nouvelle_adresse" placeholder="Adresse"/> <br/>
-						<?php echo $donnees['Ville']; ?> <input type="text" name="nouvelle_ville" placeholder="Ville"/><br/>
-						<?php echo $donnees['Region']; ?> <input type="text" name="nouvelle_region" placeholder="Région"/><br/>
-						<?php echo $donnees['Code_postal'];	?><input type="text" name="nouveau_code_postal" placeholder="Code postal"/> <br/>
+					<form method="POST" action="../compte/traitement_modifier_info.php">
+						Adresse : <input type="text" name="nouveau_num_rue" value="<?=$donnees['Num_rue']?>" size="3"/> <input type="text" name="nouvelle_adresse" value="<?=$donnees['Adresse']?>"/> <br/>
+						Ville : <input type="text" name="nouvelle_ville" value="<?=$donnees['Ville']?>"/><br/>
+						Region : <input type="text" name="nouvelle_region" value="<?=$donnees['Region']?>"/><br/>
+						Code postal : <input type="text" name="nouveau_code_postal" value="<?=$donnees['Code_postal']?>"/> <br/>
 						<input type="submit" value="Valider"/>
 					</from>
 				</p>	
@@ -83,7 +76,7 @@
 				echo 'civilité : '.$donnees['Civilite']; ?><br/>
 				<?php echo 'Nom : '.$donnees['Nom']; ?><br/>
 				<?php echo 'Prénom : '.$donnees['Prenom']; ?><br/>
-				<?php echo 'Téléphone : '.$donnees['Tel']; ?><br/>
+				<?php echo 'Téléphone : 0'.$donnees['Tel']; ?><br/>
 				<?php echo 'Date de naissance : '.$donnees['Naissance']; ?><br/>
 				<a href="mon_compte.php?modifier_info=1"><input type="button" value="modifier"/></a>
 				<p>
