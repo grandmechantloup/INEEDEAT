@@ -29,3 +29,18 @@ img
 	height: 60px;
 }
 
+strong
+{
+	font-size: 12px;
+	font-family: arial;
+	text-decoration: none;
+	line-height: 40px;
+}
+
+
+h1
+{
+	font-size: 20px;
+	text-align: center;
+
+}

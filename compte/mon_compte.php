@@ -22,7 +22,7 @@
 		{
 		?>
 			<section>
-				<a class="deco" href="deconnection" <p>Se déconnecter</p> </a>
+				<a href="../invariants/traitement_deconnexion.php" <p>Se déconnecter</p> </a>
 
 				<fieldset class="grand_cadre3">
 				<a href="../accueil/accueil.php" ><img src="../images/images_site/logo_i_need_eat.png" border="0"></a>
@@ -35,7 +35,8 @@
 					$donnees=$req->fetch();
 					?>
 					<form method="POST" action="../compte/traitement_modifier_info.php">
-						civilité : <select name="Civilite" id="Civilite">
+						<strong>
+						Civilité : <select name="Civilite" id="Civilite">
 							<option value="Monsieur">Monsieur</option>
 							<option value="Madame">Madame</option>
 						</select><br/>
@@ -44,6 +45,7 @@
 						Téléphone :	<input type="text" name="nouveau_tel" value="0<?=$donnees['Tel']?>"/><br/>
 						Date de naissance : <input type="date" name="nouvelle_naissance" value="<?=$donnees['Naissance']?>"/><br/>
 						<input type="submit" value="Valider"/>
+						</strong>
 					</form>	
 				</fieldset>
 		<?php
@@ -51,22 +53,25 @@
 		elseif(isset($_GET['modifier_info']) AND $_GET['modifier_info']==2)
 		{
 		?>
-				<a class="deco" href="deconnection" <p>Se déconnecter</p> </a>
+				<a href="../invariants/traitement_deconnexion.php" <p>Se déconnecter</p> </a>
 
 				<fieldset class="grand_cadre2">
 				<a href="../accueil/accueil.php" ><img src="../images/images_site/logo_i_need_eat.png" border="0"></a>
-					<h3> Adresse : </h3> 
+					<h1>  Changer d'adresse  </h1> 
 					<?php
 					$req=$bdd->prepare('SELECT * FROM utilisateurs WHERE id_utilisateur=?');
 					$req->execute(array($_SESSION['id_utilisateur']));
 					$donnees=$req->fetch();
 					?>
 					<form method="POST" action="../compte/traitement_modifier_info.php">
-						Adresse : <input type="text" name="nouveau_num_rue" value="<?=$donnees['Num_rue']?>" size="3"/> <input type="text" name="nouvelle_adresse" value="<?=$donnees['Adresse']?>" size="40"/> <br/>
-						Ville : <input type="text" name="nouvelle_ville" value="<?=$donnees['Ville']?>" size="40"/><br/>
+						<strong>
+						Adresse : <input type="text" name="nouveau_num_rue" value="<?=$donnees['Num_rue']?>" size="3"/> 
+						<input type="text" name="nouvelle_adresse" value="<?=$donnees['Adresse']?>" size="40"/> <br/>
+						Code postal : <input type="text" name="nouveau_code_postal" value="<?=$donnees['Code_postal']?>" size="10"/> <br/>Ville : <input type="text" name="nouvelle_ville" value="<?=$donnees['Ville']?>" size="40"/><br/>
 						Region : <input type="text" name="nouvelle_region" value="<?=$donnees['Region']?>" size="40"/><br/>
-						Code postal : <input type="text" name="nouveau_code_postal" value="<?=$donnees['Code_postal']?>" size="10"/> <br/>
+						
 						<input type="submit" value="Valider"/>
+						</strong>
 					</from>
 				</fieldset>	
 		<?php

@@ -7,11 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="../css/style_modifier_info_compte.css">
 </head>
 <body>
-	<a class="deconnection" href="" > Se deconnecter</a>
+	<a class="../invariants/traitement_deconnexion.php" href="" > Se deconnecter</a>
 	<fieldset class="cadre_principal">
 		
 		<a href="../accueil/accueil.php" ><img src="../images/images_site/logo_i_need_eat.png" border="0"></a>
 
+		<h1>Modifier mes informations de compte</h1>
 		<?php
 		if(isset($_SESSION['pseudo']))
 		{
