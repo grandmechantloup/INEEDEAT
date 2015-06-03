@@ -8,12 +8,12 @@
 			<input type="submit" value="Se connecter" href: "connect.php" class="myButton" />
 		</form>
 	</p>
-	
-		<a href="../formulaires/inscription.php"> Pas encore inscrit ?            M</a>
-	
-	
-		<a href="../recuperer_mot_de_passe.php"> ot de passe oublié ? </a>
-	
+	<p class="complement_connexion">
+		<a href="../formulaires/inscription.php"> Pas encore inscrit ? </a>
+	</p>
+	<p class="complement_connexion">
+		<a href="../recuperer_mot_de_passe.php"> Mot de passe oublié ? </a>
+	</p>
 
 	</section>
 	</fieldset>

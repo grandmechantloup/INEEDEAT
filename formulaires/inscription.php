@@ -5,11 +5,10 @@
 			<meta charset="utf-8" />
 				<link rel="stylesheet" href="../css/style_formulaire.css" />
 		<title>Formualire d'inscription</title>
-
+      <script type="text/javascript" src="verif_inscription.js"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 	</head>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>  
-        <script src="../verif_inscription.js"></script>
-
+	  
 	<body>
 		
 		<h1>

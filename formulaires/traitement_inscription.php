@@ -23,11 +23,11 @@ if(!empty($_POST['Email']) OR !empty($_POST['Pseudo']) OR !empty($_POST['Mdp']) 
             'Code_postal' => $_POST['Code_postal'],
             'Adresse' => $_POST['Adresse']
             ));
-        //header('location: ../accueil/accueil.php');
+        header('location: ../accueil/accueil.php');
     }
     else
     {
-    /*header('location: ../formulaires/inscription.php');*/
+    header('location: ../formulaires/inscription.php');
     }
 }
 ?>
