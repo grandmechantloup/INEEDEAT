@@ -15,7 +15,7 @@ h1,#b1,#b2,#b3
 }
 
 
-.grand_cadre
+.grand_cadre, .grand_cadre2,.grand_cadre3
 {
 	margin-left: 10%;
 	margin-right: 10%;
@@ -28,5 +28,4 @@ img
 	width: 100;
 	height: 60px;
 }
-
 
