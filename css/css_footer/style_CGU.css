@@ -1,17 +1,11 @@
+fieldset
+{
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
 
 textarea
 {
-	font-size: 11px;
-}
-
-textarea
-{
-	bottom: 20px;
-	top: 20px;
-}
-
-p
-{
-	text-decoration: underline;
-	font-size: 14px;
+	text-align: left;
 }
