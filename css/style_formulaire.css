@@ -1,0 +1,97 @@
+p
+{
+	font-size: 12px;
+
+}
+
+
+legend
+{
+	font-size: 20px;
+}
+
+h1
+{
+	font-size: 25px;
+	color: white;
+	text-shadow : 2px 2px 2px black;
+	
+}
+
+
+h2
+{
+	font-size: 15px;
+	color: white;
+	text-shadow : 2px 2px 2px black;
+
+}
+
+h3
+{
+	font-size: 13px;
+	color: white;
+	
+}
+
+
+h4
+{
+	font-size: 11px;
+	color: white;
+	text-shadow : 2px 2px 2px black;
+}
+*
+{
+	color: black;
+}
+
+
+
+legend
+{
+	color: black;
+	font-size: 18px;
+}
+
+fieldset
+{
+	width: 40%;
+	display: inline-block;
+	margin-top: 25px;
+  background-color: rgba(223, 232, 226 , 0.8);
+
+	opacity: 0,6;
+
+}
+
+.compte_formulaire
+{
+	position: relative;
+	bottom: 217px;
+}
+
+
+
+.bouton_valider
+{
+	position: fixed;
+
+
+}
+body
+{
+	background: url("../images/fruits_et_legumes.jpeg") fixed no-repeat center;
+	background-size: cover;
+<<<<<<< HEAD
+}
+=======
+    background-
+}
+
+
+.background: 
+{
+	
+}
+>>>>>>> origin/master

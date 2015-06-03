@@ -1,26 +1,21 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../css/style_annonce.css" />
 	<title> Ajouter une annonce </title>
 <script>
-
 function afficher(test){
     var typique=document.test.input.value;
     alert(typique);   
 }
-
 </script>    
 </head>
-
 <body>
     <form method="POST" action="traitement_annonce.php" enctype="multipart/form-data" >
 <fieldset class="informations_annonce">
 <h3> Ajouter une nouvelle annonce </h3> 
-
 <p>
 <?php 
 include("../bdd/connexion.php");
@@ -45,16 +40,10 @@ Texte de l'annonce :<br/> <TEXTAREA rows="10" cols="50" name="Description"></TEX
      <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
      <input type="file" name="mon_fichier" id="mon_fichier" /> 
 Valider ma nouvelle annonce <input type="submit" name="valider"/> 
- <script>
-
-
- 
+<script>
 </script>
 </fieldset>
-
 </p>
 </form>
-
 </body>
-
 </html>

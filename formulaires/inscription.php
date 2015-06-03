@@ -3,10 +3,9 @@
 	<head>
 
 			<meta charset="utf-8" />
-				<link rel="stylesheet" href="../css/Style_formulaire.css" />
+				<link rel="stylesheet" href="../css/style_formulaire.css" />
 		<title>Formualire d'inscription</title>
-		        
-	
+
 	</head>
 
 	<body>
@@ -18,13 +17,13 @@
 		<h2>Pour accéder à l'ensemble des fonctionnalités du site, veuillez remplir ce formulaire, aucune informations ne sera publiés sans votre accord.</h2>
 
 
-			<form name="formulaire" id="formulaire"  method="post" action="../formulaires/traitement_inscription.php" onsubmit="return verif()">
+			<form name="formulaire" id="formulaire"  method="post" action="../formulaires/traitement_inscription.php" onSubmit="return(verif_inscription.js);">
 		<fieldset class="compte_formulaire">
 
 			<legend>Compte</legend>
 			 
 			<p>
-			<label for="Email"> Votre adresse email(*)</label> : <input type="email" name="Email" id="Email" placeholder="Ex: mon_adresse_mail@ineedeat.fr" size="30" 
+			<label for="Email"> Votre adresse email(*)</label> : <input type="Email" name="Email" id="Email" placeholder="Ex: mon_adresse_mail@ineedeat.fr" size="30" 
 			value="<?php if(isset($_POST['Email'])) echo $_POST['Email'];?>" required /></p>
 			<p>
                   
@@ -32,16 +31,15 @@
 			value="<?php if (isset($_POST['Pseudo'])) echo $_POST['Pseudo'];?>" required/></p>
 			<p>
 			
-			<label for="M_d_P"> Votre mot de passe(*):<label>
-			<input type="password" name="M_d_P" id="M_d_P" placeholder="upZcuMu9@"size="30" 
-			value="<?php if (isset($_POST['M_d_P'])) echo $_POST['M_d_P'];?>" required/></p>
+			<label for="Mdp"> Votre mot de passe(*):<label>
+			<input type="password" name="Mdp" id="Mdp" placeholder="upZcuMu9@"size="30" 
+			value="<?php if (isset($_POST['Mdp'])) echo $_POST['Mdp'];?>" required/></p>
 			<p>
 			
-			<label for="Verif_M_d_P"> Vérification de votre mot de passe(*):<label>
-			<input type="password" name="Verif_M_d_P" id="Verif_M_d_P" placeholder="upZcuMu9@"size="30" 
-			value="<?php if (isset($_POST['Verif_M_d_P'])) echo $_POST['Verif_M_d_P'];?>" required/></p>
-
-
+			<label for="Verif_Mdp"> Vérification de votre mot de passe(*):<label>
+			<input type="password" name="Verif_Mdp" id="Verif_Mdp" placeholder="upZcuMu9@"size="30" 
+			value="<?php if (isset($_POST['Verif_Mdp'])) echo $_POST['Verif_Mdp'];?>" required/></p>
+			
 		</fieldset>
 		
 		<fieldset class="informations_formulaire">
@@ -58,19 +56,19 @@
 			<p>
 				<label for="Nom"> Votre nom</label> : <input type="text" name="Nom" id="Nom" placeholder="Ex: Dubois" size="30" value="<?php if (isset($_POST['Nom'])) echo $_POST['Nom'];?>"/></p>
 			<p>
-				<label for="Prenom"> Votre prenom</label> : <input type="text" name="Prenom" id="prenom" placeholder="Ex: Alexandre" size="30" value="<?php if (isset($_POST['Prenom'])) echo $_POST['Prenom'];?>"/></p>
+				<label for="Prenom"> Votre prenom</label> : <input type="text" name="Prenom" id="Prenom" placeholder="Ex: Alexandre" size="30" value="<?php if (isset($_POST['Prenom'])) echo $_POST['Prenom'];?>"/></p>
 			<p>
 				<label for="Region"> Votre region</label> : <input type="text" name="Region" id="Region" placeholder="Ex: Bretagne" size="30" value="<?php if (isset($_POST['Region'])) echo $_POST['Region'];?>" /></p>
 			<p>
 				<label for="Adresse"> Votre adresse</label> : <input type="text" name="Adresse" id="Adresse" placeholder="Ex: 5 avenue du general de Gaulle" size="30" value="<?php if (isset($_POST['Adresse'])) echo $_POST['Adresse'];?>"/></p>
 			<p>
-				<label for="C_P"> Votre code postal</label> : <input type="number" name="C_P" id="C_P" placeholder="Ex: 84200" size="8" value="<?php if (isset($_POST['C_P'])) echo $_POST['C_P'];?>"/></p>
+				<label for="Code_postal"> Votre code postal</label> : <input type="number" name="Code_postal" id="Code_postal" placeholder="Ex: 84200" size="8" value="<?php if (isset($_POST['Code_postal'])) echo $_POST['Code_postal'];?>"/></p>
 			<p>
 				<label for="Ville"> Votre ville</label> : <input type="text" name="Ville" id="Ville" placeholder="Ex: Paris" size="30" value="<?php if (isset($_POST['Ville'])) echo $_POST['Ville'];?>"/></p>
 			<p>
-				<label for="N_d_T"> Votre telephone</label> : <input type="tel" name="N_d_T" id="N_d_T" placeholder="Ex: 06 18 75 79 26" size="17" value="<?php if (isset($_POST['N_d_T'])) echo $_POST['N_d_T'];?>"/></p>
+				<label for="Tel"> Votre telephone</label> : <input type="tel" name="Tel" id="Tel" placeholder="Ex: 06 18 75 79 26" size="17" value="<?php if (isset($_POST['Tel'])) echo $_POST['Tel'];?>"/></p>
 			<p>
-				<label for="D_d_N"> Votre date de naissance</label> : <input type="date" name="D_d_N" id="D_d_N" placeholder="Ex: 1978/10/23" size="15" value="<?php if (isset($_POST['D_d_N'])) echo $_POST['D_d_N'];?>"/></p>
+				<label for="Naissance"> Votre date de naissance</label> : <input type="date" name="Naissance" id="Naissance" placeholder="Ex: 1978/10/23" size="15" value="<?php if (isset($_POST['Naissance'])) echo $_POST['Naissance'];?>"/></p>
 		</fieldset>
 
 	
@@ -86,5 +84,4 @@
 
 		</form>
 		</body>
-
 </html>

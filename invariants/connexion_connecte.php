@@ -1,3 +1,4 @@
+<fieldset>
 <article>
 	<p>
 		Bienvenu <?php echo $_SESSION['pseudo'];
@@ -8,7 +9,7 @@
 	</a>
 	<p>
 		<a href="../compte/panier.php"> 
-			<img src="../images/panier.png" alt="image du panier" id="panier"/>
+			<img src="../images/images_site/panier.png" alt="image du panier" id="panier"/>
 			<strong>Panier</strong>
 		</a>
 	</p>
@@ -16,3 +17,5 @@
 		<a href="../invariants/traitement_deconnexion.php">Déconnexion</a>
 	</p>
 </article>
+
+</fieldset>

@@ -1,0 +1,40 @@
+.cadre_principal
+{
+	margin-top: 20px;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+
+img
+{
+	width: 100;
+	height: 60px;
+	margin-bottom: 4%;
+}
+
+
+strong
+{
+	font-size: 12px;
+	font-family: arial;
+	text-decoration: none;
+	line-height: 40px;
+}
+
+br
+{
+	margin-bottom: 5px;
+
+}
+
+
+input
+{
+	margin-right: 15%;
+}
+
+.deconnection
+{
+	margin-right: 2px;
+}

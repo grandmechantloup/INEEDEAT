@@ -10,9 +10,6 @@ session_start();
 </head>
 <?php
 include("../bdd/connexion.php");
-
-
-
 if(isset($_FILES['mon_fichier']['error']))
 {
 $erreur = "aucune";
@@ -26,7 +23,6 @@ $extension_upload = strtolower(  substr(  strrchr($_FILES['mon_fichier']['name']
     {
     $erreur = "Le fichier est trop gros";
     }   
-
 if($erreur=="aucune")
 {
 $req =$bdd->prepare('SELECT id_categorie FROM categorie WHERE Categorie = ?');

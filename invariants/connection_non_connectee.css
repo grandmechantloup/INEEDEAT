@@ -1,73 +1,17 @@
-
-/* Header*/
-#Header		{
+fieldset{
+	position: fixed;
+	right:3%;
 	top: 1%;
-	width: 100%;
-}
-	
-}
-h2          {
-	font-size: 15px;
-	width: 300px;
-	margin-left: 12,5%;
-	margin-top: 1%;
-	font-family: courier;
-	color: green;
-}
-#Barre      {
-	margin-left: -45px;
-}
-
-
-table{
-	position: relative;
-	left: 5px;
-	right: 5px;
-	display:block;
-	margin-left: 0;
-	margin-right: 0;
-	font-family: Arial,sans-serif;
-    font-size: 1,2em;
-    height: 20px;
-    padding-top: 7px;
-    text-align: center;
-    color: #000;
-    background: #a5cc52;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    
-
-}
-#Bouton		{
-
-	display: inline-block;
-
-}
-#Identifiant{
-	display: inline-block;
-	text-align: left;
-}
-#Connexion	{
-	position: absolute;
-	right: 0%;
-	top: 1,5%;
 	border:  1px solid #68a0ca;
-	margin: 2px;
 	display: inline-block;
 	text-align: center;
 	width: 30%;
 	background-color: #a5cc52;
 	border-radius: 6px;
+	width: 15%;
 
 }
-#Recherche	{
 
-	position: absolute;
-	left: 35%;
-	top: 4%;
-	display: inline-block;
-	text-align: center;
-}
 .myButton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
@@ -106,53 +50,3 @@ table{
 }
 .myButton:active {
 }
-
-/*Footer*/
-
-#foot{
-	font-size: 13px;
-	width: 99%;
-	background-color: #a5cc52;
-	display: inline-block;
-	position: relative;
-	top: 100%;
-	height: 23%;
-	margin-top: 70px;
-
-}
-#Association{
-
-	display: inline-block;
-	width: 30%;
-	text-align: center;
-	margin-left: 4%;
-	
-		}
-
-
-#APropos	{
-
-	display: inline-block;
-	width: 30%;
-	text-align: center;
-	position: absolute;
-	left: 33%;
-	right: 30%;
-		}
-
-
-#Aides		{
-
-	display: inline-block;
-	width: 30%;
-	text-align: center;
-	position: absolute;
-	right: 4%;
-
-		}
-/*Font*/
-		body {
-background: linear-gradient(to right, #FDFEFD, #a5cc52);
-margin: 0px;
-}
-
