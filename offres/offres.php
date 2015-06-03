@@ -50,6 +50,18 @@
 		while($donnees=$reponse->fetch())
 		{
 			include("../annonces/produit_simple.php");
+			$req=$bdd->prepare('SELECT status_cma
+								FROM utilisateurs 
+								WHERE id_utilisateur=?');
+			$req->execute(array($_SESSION['id_utilisateur']));
+			$donnees2=$req->fetch(); 
+			if($donnees2['status_cma']==1 OR $donnees2['status_cma']==2)
+			{ 
+				$req->closeCursor();
+				?>
+				<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce']?>"><input type="button" value="Supprimer"/></a>
+				<?php
+			}
 		}	
 		$reponse->closeCursor();
 		?>

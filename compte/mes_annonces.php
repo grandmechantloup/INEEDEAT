@@ -30,7 +30,7 @@ session_start();
 										INNER JOIN categorie c
 										ON c.id_categorie=a.id_categorie
 										INNER JOIN varietes v
-										ON v.id_categorie=c.id_categorie 
+										ON v.id_variete=a.id_variete 
 										WHERE a.id_utilisateur = ? 
 										ORDER BY id_annonce DESC');
 				$reponse->execute(array($_SESSION['id_utilisateur']));
@@ -50,8 +50,15 @@ session_start();
 			<article class="vente_terminées">	
 				<strong><h1>Vente terminées</h1></strong>
 				<?php
-				$reponse = $bdd->prepare('SELECT * FROM annonces WHERE id_utilisateur = ?');
-				$reponse -> execute(array($_SESSION['id_utilisateur']));
+				$reponse=$bdd->prepare('SELECT a.Titre, c.Categorie, v.Variete, a.Prix, a.Quantite, a.Date_publication, a.id_annonce, a.Extension_upload
+										FROM annonces a
+										INNER JOIN categorie c
+										ON c.id_categorie=a.id_categorie
+										INNER JOIN varietes v
+										ON v.id_variete=a.id_variete
+										WHERE a.id_utilisateur = ? 
+										ORDER BY id_annonce DESC');
+				$reponse->execute(array($_SESSION['id_utilisateur']));
 				while ($donnees = $reponse->fetch())
 				{
 					if($donnees['Quantite']==0)
