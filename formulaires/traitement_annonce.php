@@ -49,7 +49,8 @@ $req->execute(array(
     'Description' => $_POST['Description'],
     'Date_peremption' => $_POST['Date_peremption'],
     'id_utilisateur' => $_SESSION['id_utilisateur'],
-    'extension_upload' => $extensi0    ));
+    'extension_upload' => $extension_upload ));
+
 $req = $bdd -> query('SELECT MAX(id_annonce) FROM annonces');
 $name = $req->fetch();
 $nom = "../images/images_annonces/{$name[0]}.{$extension_upload}";
@@ -64,4 +65,6 @@ else{
 else{
     header('location:http://localhost/INEEDEAT/formulaires/annonce.php?erreur=' );
 }
-?>
+?> 
+
+
