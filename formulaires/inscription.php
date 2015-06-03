@@ -7,6 +7,8 @@
 		<title>Formualire d'inscription</title>
 
 	</head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>  
+        <script src="../verif_inscription.js"></script>
 
 	<body>
 		
@@ -17,7 +19,7 @@
 		<h2>Pour accéder à l'ensemble des fonctionnalités du site, veuillez remplir ce formulaire, aucune informations ne sera publiés sans votre accord.</h2>
 
 
-			<form name="formulaire" id="formulaire"  method="post" action="../formulaires/traitement_inscription.php" onSubmit="return(verif_inscription.js);">
+			<form name="formulaire" id="formulaire"  method="post" action="../formulaires/traitement_inscription.php">
 		<fieldset class="compte_formulaire">
 
 			<legend>Compte</legend>

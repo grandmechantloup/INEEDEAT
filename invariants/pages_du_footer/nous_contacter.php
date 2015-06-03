@@ -20,7 +20,7 @@ Nous sommes à votre écoute!
  
   <fieldset><legend>Votre message :</legend>
     <p><label for="objet">Objet :</label><input type="text" id="objet" name="objet" required/></p>
-    <p><label for="message">Message :</label></br><textarea id="message" name="message" tabindex="4" cols="50" rows="10" required></textarea></p>
+    <p><label for="message">Message :</label></br><textarea id="message" name="message" cols="50" rows="10" required></textarea></p>
   </fieldset>
  
   <div style="text-align:center;"><input type="submit" name="envoi" value="Envoyer le message !" /></div>
