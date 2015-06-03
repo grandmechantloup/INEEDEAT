@@ -1,5 +1,7 @@
 <?php session_start();
 include("../bdd/connexion.php");
+
+
 if(isset($_POST['Civilite']) OR isset($_POST['nouveau_nom']) OR isset($_POST['nouveau_prenom']) OR isset($_POST['nouveau_tel']) OR isset($_POST['nouvel_naissance']))
 {
 	$req=$bdd->prepare('UPDATE utilisateurs SET Civilite=:civilite, Nom=:nom, Prenom=:prenom, Tel=:tel, Naissance=:naissance WHERE id_utilisateur=:id_utilisateur');
@@ -18,6 +20,7 @@ if(isset($_POST['nouveau_num_rue']) OR isset($_POST['nouvelle_adresse']) OR isse
 {
 	$req=$bdd->prepare('UPDATE utilisateurs SET Num_rue=:num_rue, Adresse=:adresse, Ville=:ville, Region=:region, Code_postal=:code_postal WHERE id_utilisateur=:id_utilisateur');
 	$req->execute(array(
+
 		'num_rue'=>$_POST['nouveau_num_rue'],
 		'adresse'=>$_POST['nouvelle_adresse'],
 		'ville'=>$_POST['nouvelle_ville'],
@@ -27,5 +30,8 @@ if(isset($_POST['nouveau_num_rue']) OR isset($_POST['nouvelle_adresse']) OR isse
 		));
 	$req->closeCursor();
 }
+
+
+
 header('location:../compte/mon_compte.php');
 ?>

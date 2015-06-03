@@ -1,134 +1,67 @@
 <?php
 session_start();
-$_SESSION['pseudo'] = "joker";
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="style.css" />
-	<title> cible annonce </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+    <title> cible annonce </title>
 </head>
-
-<?php include("../bdd/connexion.php"); ?>
-
 <?php
-if(isset($_FILES['image']['error']))
+include("../bdd/connexion.php");
+if(isset($_FILES['mon_fichier']['error']))
 {
-
+$erreur = "aucune";
 $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
-$extension_upload = strtolower(  substr(  strrchr($_FILES['image']['name'], '.')  ,1)  );
-
-	if ( !in_array($extension_upload,$extensions_valides) AND  $_FILES['image']['error']!= 4 ) 
-	{
-	$erreur ="L'extension est invalide";
-	}
-
-	if ($_FILES['image']['size'] > 1048576) 
-	{
-	$erreur = "Le fichier est trop gros";
-	}	
-
-
+$extension_upload = strtolower(  substr(  strrchr($_FILES['mon_fichier']['name'], '.')  ,1)  );
+    if ( !in_array($extension_upload,$extensions_valides) AND  $_FILES['mon_fichier']['error']!= 4 ) 
+    {
+    $erreur ="L'extension est invalide";
+    }
+    if ($_FILES['mon_fichier']['size'] > 1048576) 
+    {
+    $erreur = "Le fichier est trop gros";
+    }   
 if($erreur=="aucune")
 {
-$req = $bdd->prepare('INSERT INTO categorie (categorie) VALUES (:Categorie)');
-$req->execute(array(
-    
-    'categorie' => $_POST['Categorie']));
+$req =$bdd->prepare('SELECT id_categorie FROM categorie WHERE Categorie = ?');
+$req->execute(array($_POST['Categorie']));
+$donnees=$req->fetch();
+$id_categorie=$donnees['id_categorie'];
 
-$req = $bdd->prepare('INSERT INTO variete (variete) VALUES (:Variete)');
+$req=$bdd->prepare('INSERT INTO varietes (variete,id_categorie) VALUES (:variete, :id_categorie)');
 $req->execute(array(
-    
-    'variete' => $_POST['Variete']));
-    
-$req = $bdd->prepare('INSERT INTO annonces (prix, quantite, titre, description, auteur, code_postal, Date_publication, Extension_upload) VALUES (:Prix, :Quantite, :Titre, :Description, :Auteur, :Code_postal, NOW(), :Extension_upload)');
-$req->execute(array(
-	
-    'prix' => $_POST['Prix'],
-    'quantite' => $_POST['Quantite'],
-    'titre' => $_POST['Titre'],
-    'description' => $_POST['Description'],
-  	'auteur' => $_SESSION['Pseudo'],
-  	'code_postal' => $_POST['Code_postal'],
-  	'Extension_upload' => $extension_upload
-  	));
+'variete'=> $_POST['Variete'],
+'id_categorie'=> $id_categorie
+));
+$req =$bdd->query('SELECT max(id_variete) FROM varietes ');
+$donnees=$req->fetch();
 
+$req = $bdd->prepare('INSERT INTO annonces ( id_categorie, id_variete, Prix, Quantite, Titre, Description, Date_publication, Date_peremption, id_utilisateur, Extension_upload) 
+                                    VALUES ( :id_categorie, :id_variete, :Prix, :Quantite, :Titre, :Description, NOW(), :Date_peremption, :id_utilisateur, :extension_upload)');
+$req->execute(array(
+    'id_categorie' => $id_categorie,
+    'id_variete' => $donnees[0],
+    'Prix' => $_POST['Prix'],
+    'Quantite' => $_POST['Quantite'],
+    'Titre' => $_POST['Titre'],
+    'Description' => $_POST['Description'],
+    'Date_peremption' => $_POST['Date_peremption'],
+    'id_utilisateur' => $_SESSION['id_utilisateur'],
+    'extension_upload' => $extensi0    ));
 $req = $bdd -> query('SELECT MAX(id_annonce) FROM annonces');
 $name = $req->fetch();
+$nom = "../images/images_annonces/{$name[0]}.{$extension_upload}";
+$resultat = move_uploaded_file($_FILES['mon_fichier']['tmp_name'],$nom);
+header('location:http://localhost/INEEDEAT/compte/mes_annonces.php?');
+}
 
-$nom = "Image/{$name[0]}.{$extension_upload}";
-$resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nom);
-
-}
-else
-{
-header('location:../formulaires/annonce.php?erreur=' .$erreur);
+else{
+    header('location:http://localhost/INEEDEAT/formulaires/annonce.php?erreur=' .$erreur);
 }
 }
-else
-{
-$erreur = "le fichier que vous avez chargé pose problème";
-header('location:http:../formulaires/annonce.php?erreur=' .$erreur);
+else{
+    header('location:http://localhost/INEEDEAT/formulaires/annonce.php?erreur=' );
 }
 ?>
-
-<?php
-/*
-$chemin  = "http://localhost/INEEDEAT/Image/{$name[0]}.{$extension_upload}";
-$x_c     = 640; // Taille de l'image
-$y_c     = 480;
-$qualite = 80; // Qualite de l'image (0=pourrit/100=super)
-$color   = "000000"; // Couleur de fond
-
-$size = getimagesize($chemin);
-
-if($size[0] >= $x_c AND $size[1] >= $y_c) {
-    if(($size[0]/$x_c) > ($size[1]/$y_c)) {
-        $x_t = $x_c;
-        $y_t = floor(($size[1]*$x_c)/$size[0]);
-        $x_p = 0;
-        $y_p = ($y_c/2)-($y_t/2);
-    } else {
-        $x_t = floor(($size[0]*$y_c)/$size[1]);
-        $y_t = $y_c;
-        $x_p = ($x_c/2)-($x_t/2);
-        $y_p = 0;
-    }
-} else {
-    $x_t = $size[0];
-    $y_t = $size[1];
-    $x_p = ($x_c/2)-($x_t/2);
-    $y_p = ($y_c/2)-($y_t/2);
-}
-
-$extension = strrchr($chemin,'.');
-$extension = strtolower(substr($extension,1));
-
-if($extension == 'jpg' OR $extension == 'jpeg') {
-    $image_new = imagecreatefromjpeg($chemin);
-} elseif($extension == 'gif') {
-    $image_new = imagecreatefromgif($chemin);
-} elseif($extension == 'png') {
-    $image_new = imagecreatefrompng($chemin);
-} elseif($extension == 'bmp') {
-    $image_new = imagecreatefromwbmp($chemin);
-} else {
-    echo "Erreur !";
-    exit;
-}
-
-Header("Content-type: image/jpeg");
-
-$image = imagecreatetruecolor($x_c, $y_c);
-$color = imagecolorallocate($image, hexdec($color[0].$color[1]), hexdec($color[2
-].$color[3]), hexdec($color[4].$color[5]));
-imagefilledrectangle($image,0,0,$x_c,$y_c,$color);
-imagecopyresampled($image,$image_new,$x_p,$y_p,0,0,$x_t,$y_t,$size[0],$size[1]);
-imagejpeg($image,NULL,$qualite);
-
-*/?>
-
-
-

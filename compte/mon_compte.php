@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Compte</title>
+	<title>Mon Compte</title>
 	<meta charset = "utf-8"/>
+	<link rel="stylesheet" type="text/css" href="../css/style_mon_compte.css">
 </head>
 <body>
-	<?php include("../invariants/header.php"); ?>
+	
 	<nav class="nav_compte">
 		<ul>
 			<li><a href="../compte/mon_compte.php">Information du compte</a></li>
@@ -65,39 +66,59 @@
 		else
 		{
 			?>
+			<a class="deco" href="deconnection" <p>Se déconnecter</p> </a>
+			<fieldset class ="grand_cadre">
+
+			<a href="../accueil/accueil.php" ><img src="../images/images_site/logo_i_need_eat.png" border="0"></a>
 			<section>
+				
 				<h1>
-					Récapitulatif de mes informations personnelles
+					--------------------- Récapitulatif de mes informations personnelles ----------------------
 				</h1>
+
+				<fieldset class="recap_info_personelles">
 				<?php
 				$req=$bdd->prepare('SELECT * FROM utilisateurs WHERE id_utilisateur=?');
 				$req->execute(array($_SESSION['id_utilisateur']));
 				$donnees=$req->fetch();
-				echo 'civilité : '.$donnees['Civilite']; ?><br/>
+				echo 'Civilité : '.$donnees['Civilite']; ?><br/>
 				<?php echo 'Nom : '.$donnees['Nom']; ?><br/>
 				<?php echo 'Prénom : '.$donnees['Prenom']; ?><br/>
 				<?php echo 'Téléphone : 0'.$donnees['Tel']; ?><br/>
 				<?php echo 'Date de naissance : '.$donnees['Naissance']; ?><br/>
-				<a href="mon_compte.php?modifier_info=1"><input type="button" value="modifier"/></a>
-				<p>
-					<h3> Adresse : </h3> 
-					<?php
-					echo $donnees['Num_rue'].' '.$donnees['Adresse']; ?> <br/>
+				
+				</fieldset>
+				<a id="b1" href="mon_compte.php?modifier_info=1"><input type="button" value="Modifier"/></a>
+
+
+					<h1> ----------------------------------------------- Adresse ---------------------------------------------- </h1> 
+					<fieldset class="adresse">
+					<p>
+					<?php echo $donnees['Num_rue'].' '.$donnees['Adresse']; ?> <br/>
+					<?php echo $donnees['Code_postal'];	?> 
 					<?php echo $donnees['Ville']; ?> <br/>
 					<?php echo $donnees['Region']; ?> <br/>
-					<?php echo $donnees['Code_postal'];	?> <br/>
-					<a href="mon_compte.php?modifier_info=2"><input type="button" value="modifier"/></a>
+					
+					
 				</p>	
-				<h1>
-					Mon compte
-				</h1>
+				</fieldset>
+				<a id="b2" href="mon_compte.php?modifier_info=2"><input type="button" value="Modifier"/></a>
+
+
+				
+				<h1> ------------------------------------------- Mon compte --------------------------------------------	</h1>
+				
+				<fieldset class"mc">
 				<p>
 					Pseudo : <?php echo $donnees['Pseudo'] ?> <br/>
 					Email : <?php echo $donnees['Email'] ?> <br/>
 					Mot de passe : ****** <br/>
-					<a href="../compte/Modifier_info_compte.php"><input type="button" value="modifier"/></a>
+					
 				</p>
+				</fieldset>
+				<a id="b3" href="../compte/Modifier_info_compte.php"><input type="button" value="Modifier"/></a>
 			</section>
+			</fieldset>
 		<?php
 		}
 		?>
