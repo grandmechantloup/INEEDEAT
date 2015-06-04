@@ -8,4 +8,3 @@ catch (Exception $e)
 {
 	die('erreur : '.$e->getmessage());
 }
-?>
