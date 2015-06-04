@@ -59,8 +59,7 @@ fieldset
 	width: 40%;
 	display: inline-block;
 	margin-top: 25px;
-  background-color: rgba(223, 232, 226 , 0.8);
-
+    background-color: rgba(223, 232, 226 , 0.8);
 	opacity: 0,6;
 
 }
@@ -68,7 +67,7 @@ fieldset
 .compte_formulaire
 {
 	position: relative;
-	bottom: 217px;
+	bottom: 167px;
 }
 
 
@@ -81,17 +80,6 @@ fieldset
 }
 body
 {
-	background: url("../images/fruits_et_legumes.jpeg") fixed no-repeat center;
+	background: url("../images/images_site/fruits_et_legumes.jpeg") fixed no-repeat center;
 	background-size: cover;
-<<<<<<< HEAD
-}
-=======
-    background-
-}
 
-
-.background: 
-{
-	
-}
->>>>>>> origin/master

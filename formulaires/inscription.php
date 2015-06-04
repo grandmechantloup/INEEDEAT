@@ -25,21 +25,19 @@
 			 
 			<p>
 			<label for="Email"> Votre adresse email(*)</label> : <input type="Email" name="Email" id="Email" placeholder="Ex: mon_adresse_mail@ineedeat.fr" size="30" 
-			value="<?php if(isset($_POST['Email'])) echo $_POST['Email'];?>" required /></p>
+			value="<?php if(isset($_POST['Email'])) {echo $_POST['Email'];}?>" required /></p>
 			<p>
                   
 			<label for="Pseudo"> Votre pseudo(*)</label> : <input type="text" name="Pseudo" id="Pseudo" placeholder="Ex: user3432" size="30" 
-			value="<?php if (isset($_POST['Pseudo'])) echo $_POST['Pseudo'];?>" required/></p>
+			value="<?php if (isset($_POST['Pseudo'])) {echo $_POST['Pseudo'];}?>" required/></p>
 			<p>
 			
 			<label for="Mdp"> Votre mot de passe(*):<label>
-			<input type="password" name="Mdp" id="Mdp" placeholder="upZcuMu9@"size="30" 
-			value="<?php if (isset($_POST['Mdp'])) echo $_POST['Mdp'];?>" required/></p>
+			<input type="password" name="Mdp" id="Mdp" placeholder="upZcuMu9@"size="30" required/></p>
 			<p>
 			
 			<label for="Verif_Mdp"> Vérification de votre mot de passe(*):<label>
-			<input type="password" name="Verif_Mdp" id="Verif_Mdp" placeholder="upZcuMu9@"size="30" 
-			value="<?php if (isset($_POST['Verif_Mdp'])) echo $_POST['Verif_Mdp'];?>" required/></p>
+			<input type="password" name="Verif_Mdp" id="Verif_Mdp" placeholder="upZcuMu9@"size="30" required/></p>
 			
 		</fieldset>
 		
@@ -81,7 +79,7 @@
        				<input type="checkbox" name="CGU" id="CGU" required/> 	<label for="CGU">J'accepte les conditions généralles d'utilisation </label>
        			<br />
   			</p>
-  			<input type="submit" value="Valider" href="../formulaires/traitement_inscription.php" />
+  			<input type="submit" value="Valider" />
 
 		</form>
 		</body>
