@@ -12,7 +12,7 @@
 		<a href="../formulaires/inscription.php"> Pas encore inscrit ? </a>
 	</p>
 	<p class="complement_connexion">
-		<a href="../recuperer_mot_de_passe.php"> Mot de passe oublié ? </a>
+		<a href="../compte/Mdp_oublie.php"> Mot de passe oublié ? </a>
 	</p>
 
 	</section>

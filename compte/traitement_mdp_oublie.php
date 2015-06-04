@@ -1,24 +1,25 @@
 <?php
 include("../bdd/connexion.php");
-$pseudo = ($_GET['pseudo']);
 $email = ($_POST['Email']);
-$mdp = ($_GET['Mdp']);
 $message_envoye = "Nous vous envoyons un message contenant votre mot de passe";
 $message_non_envoye = "La récupération du mot de passe a échouée";
-$ineedeat = "patate@gmail.com";
+$email_eronne = "L'adresse entrèe n'est pas valide";
+$ineedeat = "simongatty3@gmail.com";
 
 
 if (isset($_POST['envoi']))
-     {
+     { 
+     	if(preg_match('#^[\w.-]+@[\w.-]+\.[a-z]{2,6}$#i', $email))
+        {
      		$req = $bdd->prepare('SELECT Mdp, Pseudo FROM Utilisateurs WHERE Email = :Email');
-			$req->execute(array(
-   			'Email' => $email));
-		
+     		$req->bindParam(":Email",$email,PDO::PARAM_STR);
+   			$req->execute();
+   			$donnees=$req->fetch();
+
 		$objet = "I need eat mot de passe oublié";
-		$message = "Votre pseudo : " . $pseudo ."\n" .
-		                  "Votre mot de passe : " . $mdp . "\n";
-		$adresse_exp = "From: patate@gmail.com";
-		
+		$message = "Bonjour cher membre voici vos informations :\n";
+				   "Votre pseudo :" .$donnees['Pseudo']."\n" .
+		           "Votre mot de passe :".$donnees['Mdp']."\n";
 		$headers  = 'From:'.$ineedeat. "\r\n"; 
 		
 		 
@@ -30,14 +31,20 @@ if (isset($_POST['envoi']))
 				$message = str_replace("&lt;","&lt;",$message);
 				$message = str_replace("&gt;","&gt;",$message);
 				$message = str_replace("&amp;","&",$message);
-
-		if(mail($email, $objet, $message, $headers))
-		   {
-		   echo '<p>'.$message_envoye.'</p>';
-		   }
+		
+		
+	    		if(mail($email, $objet, $message, $headers))
+				   {
+				   echo '<p>'.$message_envoye.'</p>';
+				   }
+				else
+				   {
+				   echo '<p>'.$message_non_envoye.'</p>';
+				   }
+		}		
 		else
-		   {
-		   echo '<p>'.$message_non_envoye.'</p>';
-		   }
+		{
+          echo '<p>'.$email_eronne.'</p>';
+		}		   
 	 }
 ?>
