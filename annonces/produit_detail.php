@@ -60,7 +60,18 @@
 			<div class="reglement">
 				<p> <a href="../compte/ajout_panier.php?id_annonce=<?php echo $donnees['id_annonce'];?>"> <input type="button" value="ajouter au panier"/> </a> </p>
 				<p> <a href="#"> <input type="button" value="acheter"/> </a> </p>
-				<p> <a href="#"> <input type="button" value="Echanger"/> </a> </p>
+				<?php
+				$req=$bdd->prepare('SELECT Echange FROM annonces WHERE id_annonce=?');
+				$req->execute(array($_GET['id_annonce']));
+				$donnees=$req->fetch();
+			
+				if($donnees[0]==1){
+					?>
+					<p> <a href="#"> <input type="button" value="Echanger"/> </a> </p><?php
+
+				}
+				?>
+
 			</div>
 			<?php $reponse->closeCursor(); ?>
 		</section>
