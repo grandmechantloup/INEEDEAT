@@ -5,6 +5,7 @@ session_start();
 <html>
 <head>
 	<title>Mes Annonces</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<meta charset = "utf-8"/>
 </head>
 <body>
@@ -65,7 +66,7 @@ session_start();
 					{
 						include("../annonces/produit_simple.php");
 						?>
-						<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce']?>"><input type="button" value="Supprimer"/></a>
+						<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce'];?>, variete=<?php echo $donnees['id_variete'];?>"><input type="button" value="Supprimer"/></a>
 						<?php
 					}
 				}

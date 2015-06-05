@@ -3,6 +3,7 @@
 <html>
 <head>
 	<title>Produit</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<meta charset="utf-8"/>
 </head>
 <body>
@@ -46,7 +47,7 @@
 							  INNER JOIN categorie c
 							  ON c.id_categorie=a.id_categorie
 							  INNER JOIN varietes v
-							  ON v.id_categorie=c.id_categorie
+							  ON v.id_variete=a.id_variete
 							  ORDER BY a.id_annonce DESC 
 							  LIMIT '.$premiere_annonce_affichee.', 5');
 		while($donnees=$reponse->fetch())

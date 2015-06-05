@@ -4,7 +4,7 @@
 <head>
 	<title>Modifier votre compte</title>
 	<meta charset = "utf-8"/>
-	<link rel="stylesheet" type="text/css" href="../css/style_modifier_info_compte.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 	<a class="../invariants/traitement_deconnexion.php" href="" > Se deconnecter</a>

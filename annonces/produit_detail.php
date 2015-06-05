@@ -4,7 +4,7 @@
 <head>
 	<title>Produit</title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="../css/style_produit_detail.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 		<?php include("../invariants/header.php");?>
@@ -59,7 +59,7 @@
 			</article>
 			<div class="reglement">
 				<p> <a href="../compte/ajout_panier.php?id_annonce=<?php echo $donnees['id_annonce'];?>"> <input type="button" value="ajouter au panier"/> </a> </p>
-				<p> <a href="#"> <input type="button" value="acheter"/> </a> </p>
+				<p> <a href="../achat/confirmationç_achat.php?id_annonce=<?php echo $donnees['id_annonce'];?>"> <input type="button" value="acheter"/> </a> </p>
 				<p> <a href="#"> <input type="button" value="Echanger"/> </a> </p>
 			</div>
 			<?php $reponse->closeCursor(); ?>
