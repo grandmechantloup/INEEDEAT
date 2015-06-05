@@ -1,6 +1,7 @@
 <?php 
 include("../bdd/connexion.php"); 
 $email = $_POST['Email'];
+$pseudo = $_POST['Pseudo'];
 
 if(empty($_POST['Email']) OR empty($_POST['Pseudo']) OR empty($_POST['Mdp']) OR empty($_POST['Verif_Mdp']))
 {
@@ -18,10 +19,20 @@ else
                 if ($num_row == 1)
                 {
                     header('location: ../formulaires/inscription.php');
-                    echo 'Vous etes déjà inscrit sur notre site';
                 }
                 else
                 {    
+                             $query = $bdd->query("SELECT * FROM Utilisateurs WHERE Pseudo='$pseudo'");
+                             $num_row = $query->rowCount();
+     
+                    if ($num_row == 1)
+                    {
+                        header('location: ../formulaires/inscription.php');
+                    }
+                    else
+                    {    
+
+
                          $req = $bdd->prepare('INSERT INTO `Utilisateurs` (`Pseudo`, `Nom`, `Prenom`, `Civilite`, `Naissance`, `Mdp`, `Tel`, `Email`, `Region`, `Ville`, `Code_postal`, `Adresse`) 
                                               VALUES (:Pseudo, :Nom, :Prenom, :Civilite, :Naissance, :Mdp, :Tel, :Email, :Region, :Ville, :Code_postal, :Adresse)');
                         $req->execute(array(
@@ -38,7 +49,7 @@ else
                         'Code_postal' => $_POST['Code_postal'],
                         'Adresse' => $_POST['Adresse']));
                         header('location: ../accueil/accueil.php');
-        }       }
+        }       }   }
         else
             {
                 header('location: ../formulaires/inscription.php');
