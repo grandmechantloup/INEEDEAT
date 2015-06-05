@@ -38,13 +38,14 @@ $req->execute(array(
 $req =$bdd->query('SELECT max(id_variete) FROM varietes ');
 $donnees=$req->fetch();
 
-$req = $bdd->prepare('INSERT INTO annonces ( id_categorie, id_variete, Prix, Quantite, Titre, Description, Date_publication, Date_peremption, id_utilisateur, Extension_upload) 
-                                    VALUES ( :id_categorie, :id_variete, :Prix, :Quantite, :Titre, :Description, NOW(), :Date_peremption, :id_utilisateur, :extension_upload)');
+$req = $bdd->prepare('INSERT INTO annonces ( id_categorie, id_variete, Prix, Quantite, Titre, Echange, Description, Date_publication, Date_peremption, id_utilisateur, Extension_upload) 
+                                    VALUES ( :id_categorie, :id_variete, :Prix, :Quantite, :Titre,:Echange, :Description, NOW(), :Date_peremption, :id_utilisateur, :extension_upload)');
 $req->execute(array(
     'id_categorie' => $id_categorie,
     'id_variete' => $donnees[0],
     'Prix' => $_POST['Prix'],
     'Quantite' => $_POST['Quantite'],
+    'Echange' => $_POST['Echange'],
     'Titre' => $_POST['Titre'],
     'Description' => $_POST['Description'],
     'Date_peremption' => $_POST['Date_peremption'],
