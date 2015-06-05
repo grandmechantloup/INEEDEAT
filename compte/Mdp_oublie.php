@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-  <style rel="stylesheet" type="text/css" href="../css/style_mon_compte.css"></style>
+  <style rel="stylesheet" type="text/css" href="../css/style.css"></style>
 	<title>Mot de passe oublié</title>
 </head>
 

@@ -5,7 +5,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="../css/style_annonce.css" />
+	<link rel="stylesheet" href="../css/style.css" />
 	<title> Gestion administrateur </title>
   
 </head>
