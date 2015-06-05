@@ -6,7 +6,9 @@
 	<meta charset="utf-8"/>
 </head>
 <body>
-		<?php include("../invariants/header.php");
+		<?php include("../invariants/header.php");?>
+		<br/>
+		<?php
 		if(!isset($premiere_annonce_affichee))
 		{
 			$premiere_annonce_affichee=0;
@@ -67,5 +69,7 @@
 		?>
 		<a href="../offres/offres.php?limit=<?php echo $limit-5;?>"> <input type="button" name="précédent" value="précédent"/> </a>
 		<a href="../offres/offres.php?limit=<?php echo $limit+5;?>"> <input type="button" name="suivant" value="suivant"/> </a>
+
+		<<?php include("../invariants/footer.php") ?>
 </body>
 </html>

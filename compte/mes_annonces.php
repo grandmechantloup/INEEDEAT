@@ -47,7 +47,7 @@ session_start();
 				$reponse->closeCursor();
 				?>
 			</article>
-			<article class="vente_terminées">	
+			<article class="ventes_terminees">	
 				<strong><h1>Vente terminées</h1></strong>
 				<?php
 				$reponse=$bdd->prepare('SELECT a.Titre, c.Categorie, v.Variete, a.Prix, a.Quantite, a.Date_publication, a.id_annonce, a.Extension_upload
@@ -80,6 +80,10 @@ else
 	echo 'Vous devez être inscrit pour accéder à cette page';
 	include("../formulaires/inscription.php");
 }
+
+	include("../invariants/footer.php");
 	?>	
+
+
 </body>
 </html>
