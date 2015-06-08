@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-		<meta charset="utf-8" />
-	
-		
-
-	</head>
-
-<footer id="footer">
-	
+<head>
+	<meta charset="utf-8" />
+</head>
+<body class="page">
+	<footer id="footer">
 	 		<div id="foot">
 			<div id="association">
 
@@ -26,7 +21,7 @@
 
 				<h3> A propos </h3>	
 
-				<p id="CGU"> <a href="../invariants/pages_du_footer/CGU.php" class="liens_invariants"> CGU 									</a>	</p>
+				<p id="CGU"> <a href="../invariants/CGU.php" class="liens_invariants"> CGU 									</a>	</p>
 				<p id="Confident"><a href="ConfidentialitÃ©.php" class="liens_invariants">	Confidentialité		</a>	</p>
 				<p id="MentionL"> <a href="MentionsLÃ©gales.php" class="liens_invariants"> Mentions légales 	 	</a>	</p>
 
@@ -36,10 +31,12 @@
 
 				<h3> Aides et services </h3>	
 
-				<p id="Aide"> <a href="../invariants/pages_du_footer/aide_et_service.php" class="liens_invariants"> Aide et service 								</a>	</p>
-				<p id="SignA"><a href="../invariants/pages_du_footer/signaler_un_abus.php" class="liens_invariants">	Signaler un abus			</a>	</p>
-				<p id="Contact"><a href="../invariants/pages_du_footer/nous_contacter.php" class="liens_invariants"> Nous contacter 	 		</a>	</p>
+				<p id="Aide"> <a href="../invariants/aide_et_service.php" class="liens_invariants"> Aide et service 								</a>	</p>
+				<p id="SignA"><a href="../invariants/signaler_un_abus.php" class="liens_invariants">	Signaler un abus			</a>	</p>
+				<p id="Contact"><a href="../invariants/nous_contacter.php" class="liens_invariants"> Nous contacter 	 		</a>	</p>
 
 			</div>
 		</div>
 	</footer>
+</body>
+</html>
