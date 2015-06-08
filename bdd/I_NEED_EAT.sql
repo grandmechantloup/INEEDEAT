@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2015 at 11:52 AM
+-- Generation Time: Jun 08, 2015 at 12:03 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -29,34 +29,18 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `annonces` (
   `id_annonce` int(11) NOT NULL AUTO_INCREMENT,
   `id_utilisateur` int(11) NOT NULL,
-  `id_varietes` int(11) NOT NULL,
+  `id_categorie` int(11) NOT NULL,
+  `id_variete` int(11) NOT NULL,
   `Titre` varchar(255) NOT NULL,
-  `Fruit_legume` tinyint(1) NOT NULL,
   `Description` text NOT NULL,
   `Quantite` double NOT NULL,
   `Prix` double NOT NULL,
   `Date_publication` date NOT NULL,
-  `Code_postal` int(5) NOT NULL,
-  `Adresse_image` int(11) NOT NULL,
-  `Extention_upload` varchar(5) NOT NULL,
-  `id_categorie` int(11) NOT NULL,
+  `Date_peremption` date NOT NULL,
+  `Extension_upload` varchar(5) NOT NULL,
+  `Echange` tinyint(1) NOT NULL,
   PRIMARY KEY (`id_annonce`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=63 ;
-
---
--- Dumping data for table `annonces`
---
-
-INSERT INTO `annonces` (`id_annonce`, `id_utilisateur`, `id_varietes`, `Titre`, `Fruit_legume`, `Description`, `Quantite`, `Prix`, `Date_publication`, `Code_postal`, `Adresse_image`, `Extention_upload`, `id_categorie`) VALUES
-(54, 8, 0, 'sdfg', 0, 'sdfg', 2, 10, '0000-00-00', 0, 0, '', 0),
-(55, 8, 0, 'sdfg', 0, 'sdfg', 2, 10, '0000-00-00', 0, 0, '', 0),
-(56, 8, 0, 'sdfg', 0, 'sdfg', 2, 10, '0000-00-00', 0, 0, '', 0),
-(57, 8, 0, 'sdfg', 0, 'sdfg', 2, 10, '0000-00-00', 0, 0, '', 0),
-(58, 8, 0, 'sdfg', 0, 'sdfg', 2, 10, '0000-00-00', 0, 0, '', 0),
-(59, 8, 0, 'sdfg', 0, 'sdfg', 2, 10, '0000-00-00', 0, 0, '', 0),
-(60, 8, 0, 'sdfg', 0, 'sdfg', 2, 10, '0000-00-00', 0, 0, '', 0),
-(61, 8, 0, 'sdfg', 0, 'sdfg', 2, 10, '0000-00-00', 0, 0, '', 0),
-(62, 8, 0, 'azsazsazs', 0, 'azs', 1, 1, '0000-00-00', 0, 0, '', 0);
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 -- --------------------------------------------------------
 
@@ -65,9 +49,83 @@ INSERT INTO `annonces` (`id_annonce`, `id_utilisateur`, `id_varietes`, `Titre`, 
 --
 
 CREATE TABLE IF NOT EXISTS `categorie` (
-  `id_categorie` int(11) NOT NULL,
-  `Categorie` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id_categorie` int(11) NOT NULL AUTO_INCREMENT,
+  `Categorie` varchar(255) NOT NULL,
+  `Fruit_legume` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id_categorie`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=67 ;
+
+--
+-- Dumping data for table `categorie`
+--
+
+INSERT INTO `categorie` (`id_categorie`, `Categorie`, `Fruit_legume`) VALUES
+(1, 'abricot', 0),
+(2, 'amande', 0),
+(3, 'ananas', 0),
+(4, 'artichaut', 1),
+(5, 'asperge', 1),
+(6, 'aubergine', 1),
+(7, 'avocat', 1),
+(8, 'banane', 0),
+(9, 'betterave', 1),
+(10, 'brocoli', 1),
+(11, 'carotte', 1),
+(12, 'cassis', 0),
+(13, 'cerise', 0),
+(14, 'chataigne', 1),
+(15, 'chou', 1),
+(16, 'chou de bruxelles', 1),
+(17, 'chou fleur', 1),
+(18, 'citron', 0),
+(19, 'citrouille', 1),
+(20, 'clementine', 0),
+(21, 'coing', 0),
+(22, 'conconbre', 1),
+(23, 'cornichon', 1),
+(24, 'courge', 1),
+(25, 'courgette', 1),
+(26, 'endive', 0),
+(27, 'epinard', 0),
+(28, 'figue', 0),
+(29, 'fraise', 0),
+(30, 'framboise', 0),
+(31, 'gland', 0),
+(32, 'goyave', 0),
+(33, 'grenade', 0),
+(34, 'groseille', 0),
+(35, 'haricot ', 0),
+(36, 'kiwi', 0),
+(37, 'lichi', 0),
+(38, 'mandarine', 0),
+(39, 'mangue', 0),
+(40, 'marron', 0),
+(41, 'melon', 0),
+(42, 'mirabele', 0),
+(43, 'mure', 0),
+(44, 'mirtille', 0),
+(45, 'noisette', 0),
+(46, 'noix', 0),
+(47, 'noix de coco', 0),
+(48, 'noix de cajou', 0),
+(49, 'olive', 0),
+(50, 'orange', 0),
+(51, 'pamplemous', 0),
+(52, 'pasteque', 0),
+(53, 'peche', 0),
+(54, 'petit poit', 1),
+(55, 'piment', 1),
+(56, 'pistache', 1),
+(57, 'poire', 0),
+(58, 'poireau', 1),
+(59, 'poivron', 1),
+(60, 'pomme', 0),
+(61, 'potiron', 1),
+(62, 'prune', 0),
+(63, 'radis', 1),
+(64, 'raisin', 0),
+(65, 'salade', 1),
+(66, 'tomate', 1);
 
 -- --------------------------------------------------------
 
@@ -110,18 +168,7 @@ CREATE TABLE IF NOT EXISTS `panier` (
   `id_annonce` int(11) NOT NULL,
   `Quantite` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
-
---
--- Dumping data for table `panier`
---
-
-INSERT INTO `panier` (`id`, `id_utilisateur`, `id_annonce`, `Quantite`) VALUES
-(11, 8, 58, 0),
-(12, 8, 0, 0),
-(13, 8, 0, 0),
-(14, 8, 0, 0),
-(15, 8, 0, 0);
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -131,9 +178,10 @@ INSERT INTO `panier` (`id`, `id_utilisateur`, `id_annonce`, `Quantite`) VALUES
 
 CREATE TABLE IF NOT EXISTS `transactions` (
   `id_transaction` int(11) NOT NULL AUTO_INCREMENT,
-  `Statut` tinyint(1) NOT NULL,
   `Acheteur` varchar(100) NOT NULL,
   `Montant` double NOT NULL,
+  `id_annonce` int(11) NOT NULL,
+  `Quantite` int(11) NOT NULL,
   PRIMARY KEY (`id_transaction`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -145,6 +193,7 @@ CREATE TABLE IF NOT EXISTS `transactions` (
 
 CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT,
+  `Status_cma` int(1) DEFAULT NULL,
   `Email` varchar(255) NOT NULL,
   `Pseudo` varchar(60) NOT NULL,
   `Mdp` varchar(100) NOT NULL,
@@ -153,25 +202,22 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `Prenom` varchar(50) NOT NULL,
   `Tel` int(10) NOT NULL,
   `Naissance` date NOT NULL,
-  `Stat` int(11) NOT NULL,
-  `Identifiant` int(100) NOT NULL,
+  `Num_rue` int(11) NOT NULL,
   `Adresse` varchar(255) NOT NULL,
-  `Region` varchar(255) NOT NULL,
   `Code_postal` int(5) NOT NULL,
   `Ville` varchar(255) NOT NULL,
-  `Num_rue` int(11) NOT NULL,
+  `Region` varchar(255) NOT NULL,
   PRIMARY KEY (`id_utilisateur`),
   UNIQUE KEY `Pseudo` (`Pseudo`),
   UNIQUE KEY `Email` (`Email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `utilisateurs`
 --
 
-INSERT INTO `utilisateurs` (`id_utilisateur`, `Email`, `Pseudo`, `Mdp`, `Civilite`, `Nom`, `Prenom`, `Tel`, `Naissance`, `Stat`, `Identifiant`, `Adresse`, `Region`, `Code_postal`, `Ville`, `Num_rue`) VALUES
-(8, 'math.girardon@hotmail.fr', 'Mathdx', 'mamat', 0, 'girardon', 'mathieu', 660209892, '1994-08-10', 0, 0, 'place de l''eglise', 'Ile-de-france', 92500, 'Rueil-Malmaison', 7),
-(9, '', 'math', 'azerty', 0, '', '', 0, '0000-00-00', 0, 0, '', '', 0, '', 0);
+INSERT INTO `utilisateurs` (`id_utilisateur`, `Status_cma`, `Email`, `Pseudo`, `Mdp`, `Civilite`, `Nom`, `Prenom`, `Tel`, `Naissance`, `Num_rue`, `Adresse`, `Code_postal`, `Ville`, `Region`) VALUES
+(8, 2, 'math.girardon@hotmail.fr', 'Mathdx', 'mamat', 0, 'girardon', 'mathieu', 660209892, '1994-08-10', 7, 'place de l''eglise', 92500, 'rueil-malmaison', 'Ile-de-France');
 
 -- --------------------------------------------------------
 
@@ -184,7 +230,7 @@ CREATE TABLE IF NOT EXISTS `varietes` (
   `id_categorie` int(11) NOT NULL,
   `variete` varchar(255) NOT NULL,
   PRIMARY KEY (`id_variete`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=35 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
