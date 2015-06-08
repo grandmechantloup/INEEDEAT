@@ -42,7 +42,6 @@ session_start();
 			</article>
 			<article class="ventes_terminees">	
 				<strong><h1>Vente terminées</h1></strong>
-				<textarea rows="15" cols="150" readonly="">
 					<?php
 					$reponse=$bdd->prepare('SELECT a.Titre, c.Categorie, v.Variete, a.Prix, a.Quantite, a.Date_publication, a.id_annonce, a.Extension_upload
 											FROM annonces a
@@ -65,7 +64,6 @@ session_start();
 					}
 					$reponse->closeCursor();
 					?>
-				</textarea>
 			</article>
 		</div>
 		<?php
