@@ -42,28 +42,30 @@ session_start();
 			</article>
 			<article class="ventes_terminees">	
 				<strong><h1>Vente terminées</h1></strong>
-				<?php
-				$reponse=$bdd->prepare('SELECT a.Titre, c.Categorie, v.Variete, a.Prix, a.Quantite, a.Date_publication, a.id_annonce, a.Extension_upload
-										FROM annonces a
-										INNER JOIN categorie c
-										ON c.id_categorie=a.id_categorie
-										INNER JOIN varietes v
-										ON v.id_variete=a.id_variete
-										WHERE a.id_utilisateur = ? 
-										ORDER BY id_annonce DESC');
-				$reponse->execute(array($_SESSION['id_utilisateur']));
-				while ($donnees = $reponse->fetch())
-				{
-					if($donnees['Quantite']==0)
+				<textarea rows="15" cols="150" readonly="">
+					<?php
+					$reponse=$bdd->prepare('SELECT a.Titre, c.Categorie, v.Variete, a.Prix, a.Quantite, a.Date_publication, a.id_annonce, a.Extension_upload
+											FROM annonces a
+											INNER JOIN categorie c
+											ON c.id_categorie=a.id_categorie
+											INNER JOIN varietes v
+											ON v.id_variete=a.id_variete
+											WHERE a.id_utilisateur = ? 
+											ORDER BY id_annonce DESC');
+					$reponse->execute(array($_SESSION['id_utilisateur']));
+					while ($donnees = $reponse->fetch())
 					{
-						include("../annonces/produit_simple.php");
-						?>
-						<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce'];?>, variete=<?php echo $donnees['id_variete'];?>"><input type="button" value="Supprimer"/></a>
-						<?php
+						if($donnees['Quantite']==0)
+						{ 
+							include("../annonces/produit_simple.php");
+							?>
+							<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce'];?>, variete=<?php echo $donnees['id_variete'];?>"><input type="button" value="Supprimer"/></a>
+							<?php
+						}
 					}
-				}
-				$reponse->closeCursor();
-				?>
+					$reponse->closeCursor();
+					?>
+				</textarea>
 			</article>
 		</div>
 		<?php
