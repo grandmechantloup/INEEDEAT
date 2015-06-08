@@ -13,14 +13,6 @@ session_start();
 	if(isset($_SESSION['id_utilisateur']))
 	{
 		include("../invariants/header.php"); ?>	
-		<nav class="nav_compte">
-		<ul>
-			<li><a href="../compte/mon_compte.php">Information du compte</a></li>
-			<li><a href="../compte/modifier_info_compte.php">Modifier Pseudo, mot de passe, email</a></li>
-			<li><a href="../compte/mes_annonces.php">Mes annonces</a></li>
-			<li><a href="#">Mes achats</a></li>
-		</ul>
-		</nav>
 		<div class="mes_annonces">
 			<article class="ventes_en_cours">
 				<strong><h1>Ventes en cours</h1></strong>
@@ -41,7 +33,7 @@ session_start();
 					{
 						include("../annonces/produit_simple.php");
 						?>
-						<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce']?>"><input type="button" value="Supprimer"/></a>
+						<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce']?>"><input type="button" value="Supprimer" class="bouton_suppr_annonce"/></a>
 						<?php
 					}
 				}

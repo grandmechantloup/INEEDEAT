@@ -51,6 +51,6 @@
 				contact@ineedeat.fr
 			</textarea>
 		</fieldset>
-<?php include ("../invariants/footer.php") ?>
+<?php include("../invariants/footer.php") ?>
 </body>
 </html>

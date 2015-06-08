@@ -22,7 +22,7 @@ $req=$bdd->query('SELECT Categorie FROM categorie');
 while ($donnees=$req->fetch())
 {
 ?>
-    <option name="<?php echo $donnees['Categorie'];?>"><?php echo $donnees['Categorie']; ?></option>
+    <option name="<?php echo $donnees['Categorie'];?>"> <?php echo $donnees['Categorie']; ?> </option>
 <?php
 }
 ?>

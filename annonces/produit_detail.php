@@ -45,7 +45,7 @@
 				<strong>prix</strong> : <span class="prix"><?php echo $donnees['Prix']; ?> €/Kg </span><br/>
 			</p>
 			<p class="info_prod">
-				<strong>Quantité restante</strong> : <span class="quantite"> <?php echo $donnees['Quantite']; ?>Kg </span><br/>
+				<strong>Quantité restante</strong> : <span class="quantite"> <?php echo $donnees['Quantite']; ?> Kg </span><br/>
 			</p>
 			<p class="info_prod">
 				<strong>Date de mise en vente</strong> : <span class="date_publication"><?php echo $donnees['Date_publication']; ?></span>

@@ -29,7 +29,7 @@ header
 {
 	width:1141px;
 }	
-.my_button, .bouton_reglement
+.my_button, .bouton_reglement, .bouton_offres, .bouton_suppr_annonce
 {
 	color:#c3ee7f;
 	font-weight: bold;
@@ -48,7 +48,10 @@ h2
 	color:#035dbd;
 	font-weight: bold;
 }
-
+.info_produit_simple h2
+{
+	font-size: 1.9em;
+}
 /***************************************************propriétés visuels ***************************************************/
 .liens_invariants:hover
 {
@@ -320,17 +323,43 @@ table
 {
 	margin-top: 22px;
 }
-.bouton_reglement
+.bouton_offres, .bouton_reglement, .bouton_suppr_annonce
 {
 	padding-left: 5px;
+	border-radius: 7px;
+	background-color: #035dbd;
+}
+.bouton_reglement
+{
 	margin-left: 0px;
 	margin-top: 38px;
-	border-radius: 7px;
 	width:113%;
 	vertical-align: bottom;
-	background-color: #035dbd;
 	padding-top: 19px;
 	padding-bottom: 19px;
+}
+.bouton_suppr_annonce
+{
+	margin-left: 37px;
+	margin-top: -1px;
+	width:87%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.bouton_offres
+{
+	margin-left: 68px;
+	margin-top: 38px;
+	width:16%;
+	padding-top: 19px;
+	padding-bottom: 19px;
+}
+.suivant_precedent
+{
+	margin-bottom: 19px;
+	position: relative;
+	left:44%;
+	bottom: 10px;
 }
 #fruits,#legumes
 {
@@ -416,7 +445,9 @@ table
 }
 .mes_annonces
 {
-	width:72%;
+	border:1px solid #b3b3b3;
+	background-color: white;
+	width:86%;
 	padding-left: 2%;
 	padding-top: 1%;
 	margin-left: -16%;
@@ -424,6 +455,7 @@ table
 	left:219px;
 	top:40px;
 	display:inline-block;
+
 }
 .aides
 {
@@ -497,5 +529,71 @@ h1,#b1,#b2,#b3
 	margin-top: 25px;
 	margin-left: 30%;
     background-color: rgba(255, 255, 255 , 0.6);
-
+}
+.image {
+display:block;
+width:100px;
+height:100px;
+background-position:50% 50%;
+}
+.produit_simple
+{
+	width:837px;
+	margin-top: 3%;
+	border: 1px solid #b3b3b3;
+	margin-left: 4%;
+}
+.date_produit_simple, .image_produit_simple, .info_produit_simple, .titre_categorie, .prix_quantite
+{
+	display:inline-block;
+}
+.date_produit_simple
+{
+	position: relative;
+	top:-39px;
+	left:23px;
+}
+.image_produit_simple
+{
+	position: relative;
+	left:56px;
+}
+.info_produit_simple
+{
+	position: relative;
+	width:66%;
+	left:90px;
+	top:-21px;
+	padding-top: 56px;
+	padding-bottom:19px;
+}
+.page_offres
+{
+	border:1px solid #b3b3b3;
+	background-color: white;
+	margin-top: 25px;
+	width:88%;
+	margin-left: 2%;
+	padding-left:4%;
+}
+.info_produit_simple h2
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.titre_categorie
+{
+	position: absolute;
+	left:10px;
+	top:8px;
+}
+.prix_quantite
+{
+	position: absolute;
+	right:41px;
+	bottom:0px;
+}
+.prix_quantite div 
+{
+	margin-top: 8px;
 }

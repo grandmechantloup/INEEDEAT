@@ -7,8 +7,8 @@
 	<meta charset="utf-8"/>
 </head>
 <body class="page">
-		<?php include("../invariants/header.php");?>
-		<br/>
+	<?php include("../invariants/header.php");?>
+	<div class="page_offres">
 		<?php
 		if(!isset($premiere_annonce_affichee))
 		{
@@ -65,7 +65,7 @@
 				{ 
 					$req->closeCursor();
 					?>
-					<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce']?>"><input type="button" value="Supprimer"/></a>
+					<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce']?>"><input type="button" value="Supprimer" class="bouton_suppr_annonce"/></a>
 					<?php
 				}
 			}
@@ -74,7 +74,7 @@
 		?>
 		<a href="../offres/offres.php?limit=<?php echo $limit-5;?>"> <input type="button" name="précédent" value="précédent"/> </a>
 		<a href="../offres/offres.php?limit=<?php echo $limit+5;?>"> <input type="button" name="suivant" value="suivant"/> </a>
-
-		<?php include("../invariants/footer.php") ?>
+	</div>
+	<?php include("../invariants/footer.php") ?>
 </body>
 </html>
