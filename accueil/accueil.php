@@ -15,6 +15,7 @@
 	<a href="../annonces/legumes.php">
 	<img src="../images/images_site/legumes.jpg" alt="legumes" title="legumes" id="legumes" href="../annonces/legumes.php"/>
 	</a>
+
 </p>	
 	<?php include("../invariants/footer.php"); ?>
 <?php $heure= date("H");
