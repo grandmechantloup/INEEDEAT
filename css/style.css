@@ -12,18 +12,24 @@
 a
 {
 	text-decoration: none;
+	color:black;
+}
+.liens_invariants
+{
+	text-decoration: none;
 	color:#035dbd;
 	font-weight: bold;
 }
 .titre_site
 {
 	font-size:1.6em;
+	font-family: cursive;	
 }
 header
 {
 	width:1141px;
 }	
-.my_button
+.my_button, .bouton_reglement
 {
 	color:#c3ee7f;
 	font-weight: bold;
@@ -32,8 +38,22 @@ header
 {
 	 font-size: 2em;	
 }
+h2
+{
+	font-size:1.2em;
+}
+.prix, .quantite
+{
+	font-size: 1.5em;
+	color:#035dbd;
+	font-weight: bold;
+}
 
 /***************************************************propriétés visuels ***************************************************/
+.liens_invariants:hover
+{
+	text-decoration: underline;
+}
 .page
 {
 	width:1100px;	
@@ -52,8 +72,6 @@ header
 	margin-top: 0%;
 	width: 40%;
 	margin-bottom: 0%;
-	font-family: cursive;
-
 }
 #pseudo
 {
@@ -83,7 +101,7 @@ header
 	display:inline-block;
 	margin-left: 54%;
 	width: 20%;
-	left: 40px;
+	left: 40px;   /***** à voir *****/
 }
 .connection_non_connecte
 {
@@ -95,7 +113,7 @@ header
 {
 	width: 18%;
 	min-width: 247px;
-	left: 15px
+	left: 15px; /***** à voir *****/
 }
 #recherche
 {
@@ -138,6 +156,7 @@ table
 {
 	background-color: #c3ee7f;
 	border-radius: 7px;
+	width:100%;
 }
 #panier
 {
@@ -160,14 +179,11 @@ table
 	border-radius: 10px 0px 10px 10px;
 	background-color: #c3ee7f;
 }
-table
-{
-	width:100%;
-}
 #footer
 {
-	width:96%;
+	width:100%;
 	min-width: 1000px;
+	margin-top: 60px;
 }
 #foot
 {
@@ -179,8 +195,8 @@ table
 #association, #a_propos, #aides
 {
 	float: left;
-	padding-right: 16%;
-	padding-left:2%;
+	padding-right: 8%;
+	padding-left:8%;
 	background-color:#c3ee7f;
 	width:14%;
 }
@@ -196,10 +212,6 @@ table
 .nav_compte
 {
 	float:left;
-}
-.produit_simple
-{
-
 }
 *
 {
@@ -221,8 +233,8 @@ table
 {
 	display:inline-block;
 	position:absolute;
-	right:100px;
-	bottom:0;
+	right:144px;
+	bottom:120px;
 }
 .image_annonce
 {
@@ -251,118 +263,156 @@ table
 {
 	margin-left: 45px;
 }
-
+.page_admin
+{
+	display: inline-block;
+	position: absolute;
+	top:200px;
+	left:200px;
+}
+.categorie
+{
+	margin-left: 10px;
+}
+.description_annonce
+{
+	margin-top: 25px;
+	padding-bottom:15px;
+	padding-right: 30px;
+	padding-left: 10px;
+	padding-top:5px;
+	width:700px;
+	border:1px solid #b3b3b3;
+}
+.info_produit_detail
+{
+	padding-left: 25px;
+}
+.localisation
+{
+	padding-left: 64px;
+}
+.vendeur
+{
+	padding-left: 88px;
+}
+.prix
+{
+	padding-left: 115px;
+}
+.quantite
+{
+	padding-left: 30px;
+}
+.date_publication
+{
+	padding-left: 3px;
+}
+.info_prod
+{
+	margin-top: 22px;
+}
+.bouton_reglement
+{
+	padding-left: 5px;
+	margin-left: 0px;
+	margin-top: 38px;
+	border-radius: 7px;
+	width:113%;
+	vertical-align: bottom;
+	background-color: #035dbd;
+	padding-top: 19px;
+	padding-bottom: 19px;
+}
 #fruits,#legumes
 {
 	margin-top: 50px;
 	width: 512px;
 	height: 320px;
 }
+.page
+{
+	background-color: white;
+}
+#soleil19, #lune31
+{
+	position: absolute;
+	top:300px;
+	left: -107px;
+}
+#soleil20, #lune32
+{
+	position: absolute;
+	top:232px; 
+	left:-33px;
+}
+#soleil21, #lune33
+{
+	position: absolute;
+	top:173px; 
+	left:53px;
+}
+#soleil22, #lune10
+{
+	position: absolute;
+	top:126px; 
+	left:137px;
+}
+#soleil23, #lune11
+{
+	position: absolute;
+	top:112px; 
+	left:234px;
+}
+#soleil24, #lune12
+{
+	position: absolute;
+	top:111px; 
+	left:343px;
+}
+#soleil30, #lune18
+{
+	position: absolute;
+	top:300px;
+	right: -40px;
+}
+#soleil29, #lune17
+{
+	position: absolute;
+	top:226px; 
+	right:32px;
+}
+#soleil28, #lune16
+{
+	position: absolute;
+	top:168px; 
+	right:115px;
+}
+#soleil27, #lune15
+{
+	position: absolute;
+	top:130px; 
+	right:207px;
+}
+#soleil26, #lune14
+{
+	position: absolute;
+	top:112px; 
+	right:317px;
+}
+#soleil25, #lune13
+{
+	position: absolute;
+	top:110px; 
+	right:428px;
+}
+	
 /*****SIMON*****/
 .page 
 {
 	background: url("../images/images_site/herbe.JPEG") fixed no-repeat center;
 	background-size: cover;
 }
-
-
-#soleil1, #soleil13
-{
- position: absolute;
- top:300px;
- left: -107px;
- width: 200px;
- height: 200px;
-}
-#soleil2, #soleil14
-{
- position: absolute;
- top:232px; 
- left:-33px;
- width: 200px;
- height: 200px;
-}
-#soleil3, #soleil15
-{
- position: absolute;
- top:173px; 
- left:53px;
- width: 200px;
- height: 200px;
-}
-#soleil4, #soleil16
-{
- position: absolute;
- top:126px; 
- left:137px;
- width: 200px;
- height: 200px;
-}
-#soleil5,#soleil17
-{
- position: absolute;
- top:112px; 
- left:234px;
- width: 200px;
- height: 200px;
-}
-#soleil6, #soleil18
-{
- position: absolute;
- top:111px; 
- left:343px;
- width: 200px;
- height: 200px;
-}
-#soleil12, #soleil24
-{
- position: absolute;
- top:300px;
- right: -40px;
- width: 200px;
- height: 200px;
-}
-#soleil11, #soleil23
-{
- position: absolute;
- top:226px; 
- right:32px;
- width: 200px;
- height: 200px;
-}
-#soleil10, #soleil22
-{
- position: absolute;
- top:168px; 
- right:115px;
- width: 200px;
- height: 200px;
-}
-#soleil9, #soleil21
-{
- position: absolute;
- top:130px; 
- right:207px;
- width: 200px;
- height: 200px;
-}
-#soleil8, #soleil20
-{
- position: absolute;
- top:112px; 
- right:317px;
- width: 200px;
- height: 200px;
-}
-#soleil7, #soleil19
-{
- position: absolute;
- top:110px; 
- right:428px;
- width: 200px;
- height: 200px;
-}
-
 /******MON COMPTE***/
 .grand_cadre, .grand_cadre2,.grand_cadre3
 {
@@ -444,105 +494,6 @@ h1
 	background: url("../images/images_site/herbe.JPEG") fixed no-repeat center;
 	background-size: cover;
 }
-
-
-#soleil1, #soleil13
-{
- position: absolute;
- top:300px;
- left: -107px;
- width: 200px;
- height: 200px;
-}
-#soleil2, #soleil14
-{
- position: absolute;
- top:232px; 
- left:-33px;
- width: 200px;
- height: 200px;
-}
-#soleil3, #soleil15
-{
- position: absolute;
- top:173px; 
- left:53px;
- width: 200px;
- height: 200px;
-}
-#soleil4, #soleil16
-{
- position: absolute;
- top:126px; 
- left:137px;
- width: 200px;
- height: 200px;
-}
-#soleil5,#soleil17
-{
- position: absolute;
- top:112px; 
- left:234px;
- width: 200px;
- height: 200px;
-}
-#soleil6, #soleil18
-{
- position: absolute;
- top:111px; 
- left:343px;
- width: 200px;
- height: 200px;
-}
-#soleil12, #soleil24
-{
- position: absolute;
- top:300px;
- right: -40px;
- width: 200px;
- height: 200px;
-}
-#soleil11, #soleil23
-{
- position: absolute;
- top:226px; 
- right:32px;
- width: 200px;
- height: 200px;
-}
-#soleil10, #soleil22
-{
- position: absolute;
- top:168px; 
- right:115px;
- width: 200px;
- height: 200px;
-}
-#soleil9, #soleil21
-{
- position: absolute;
- top:130px; 
- right:207px;
- width: 200px;
- height: 200px;
-}
-#soleil8, #soleil20
-{
- position: absolute;
- top:112px; 
- right:317px;
- width: 200px;
- height: 200px;
-}
-#soleil7, #soleil19
-{
- position: absolute;
- top:110px; 
- right:428px;
- width: 200px;
- height: 200px;
-}
-
 /******MON COMPTE***/
 .grand_cadre, .grand_cadre2,.grand_cadre3
 {
@@ -606,5 +557,4 @@ h1
 	margin-top: 25px;
 	margin-left: 30%;
     background-color: rgba(255, 255, 255 , 0.6);
-
 }

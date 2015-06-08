@@ -29,10 +29,10 @@
 	</section>
 	<nav id="navigation">
 		<table>
-			<td id="td1"><a href="../offres/offres.php">Offres</a></td>
-			<td id="td2"><a href="../formulaires/annonce.php">Poser une annonce</a></td>
-			<td id="td3"><a href="../compte/mes_annonces.php">Mes annonces</a></td>
-			<td id="td4"><a href="../compte/mes_annonces.php">Mon panier</a></td>
+			<td id="td1"><a href="../offres/offres.php" class="liens_invariants">Offres</a></td>
+			<td id="td2"><a href="../formulaires/annonce.php" class="liens_invariants">Poser une annonce</a></td>
+			<td id="td3"><a href="../compte/mes_annonces.php" class="liens_invariants">Mes annonces</a></td>
+			<td id="td4"><a href="../compte/panier.php" class="liens_invariants">Mon panier</a></td>
 		</table>
 	</nav>
 </header>

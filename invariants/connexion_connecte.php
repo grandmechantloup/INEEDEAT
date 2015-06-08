@@ -9,10 +9,10 @@
 			</a>
 		</p>
 		<div class="compte">
-			<a href="../compte/mon_compte.php">Mon compte</a>
+			<a href="../compte/mon_compte.php" class="liens_invariants">Mon compte</a>
 		</div>
 		<div class="deconnexion">
-			<a href="../invariants/traitement_deconnexion.php" type="submit" class="myButton" >Déconnexion</a>
+			<a href="../invariants/traitement_deconnexion.php" type="submit" class="liens_invariants">Déconnexion</a>
 		</div>
 		<?php require("../bdd/connexion.php");
 		$req=$bdd->prepare('SELECT status_cma FROM utilisateurs WHERE id_utilisateur=?');
@@ -22,7 +22,7 @@
 		{ 
 			?>
 			<div class="administration">
-				<a href="../compte/gestion_administrateur.php" type="submit" class="myButton">Administration</a>
+				<a href="../compte/gestion_administrateur.php" type="submit" class="liens_invariants">Administration</a>
 			</div>
 			<?php
 		}

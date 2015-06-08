@@ -8,11 +8,11 @@
 			<input type="submit" value="Se connecter" href: "connect.php" class="my_button" />
 		</form>
 	</p>
-	<p class="complement_connexion">
-		<a href="../formulaires/inscription.php"> Pas encore inscrit ? </a>
+	<p class="complement_connexion" class="liens_invariants">
+		<a href="../formulaires/inscription.php" class="liens_invariants"> Pas encore inscrit ? </a>
 	</p>
-	<p class="complement_connexion">
-		<a href="../compte/Mdp_oublie.php"> Mot de passe oublié ? </a>
+	<p class="complement_connexion" class="liens_invariants"> 
+		<a href="../compte/Mdp_oublie.php" class="liens_invariants"> Mot de passe oublié ? </a>
 	</p>
 
 	</section>

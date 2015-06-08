@@ -74,17 +74,13 @@ session_start();
 				?>
 			</article>
 		</div>
-	<?php
+		<?php
+		include("../invariants/footer.php");
 	}
 else
 {
-	echo 'Vous devez être inscrit pour accéder à cette page';
 	include("../formulaires/inscription.php");
 }
-
-	include("../invariants/footer.php");
-	?>	
-
-
+?>
 </body>
 </html>
