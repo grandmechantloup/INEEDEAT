@@ -1,3 +1,4 @@
+<? session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,7 @@
 	<title>CGU</title>
 </head>
 <body class="page">
-<?php include ("../invariants/header.php") ?>
+<?php include("../invariants/header.php"); ?>
 		<fieldset>
 			<p>Conditions générales d'utilisation:</p>
 			<textarea rows="15" cols="150" readonly="">
