@@ -9,10 +9,10 @@
 
 	</head>
 
-<footer id="Footer">
+<footer id="footer">
 	
 	 		<div id="foot">
-			<span id="Association">
+			<div id="association">
 
 				<h3> L'association </h3>
 
@@ -20,9 +20,9 @@
 				<p id="NoA"> <a href="NosActions.php">	Nos actions						</a>	</P>
 				<p id="SdA"> <a href="Sinvestir.php"> S'investir dans l'association 	</a>	</p>
 
-			</span>
+			</div>
 
-			<span id="APropos">
+			<div id="a_propos">
 
 				<h3> A propos </h3>	
 
@@ -30,9 +30,9 @@
 				<p id="Confident"><a href="ConfidentialitÃ©.php">	Confidentialité		</a>	</p>
 				<p id="MentionL"> <a href="MentionsLÃ©gales.php"> Mentions légales 	 	</a>	</p>
 
-			</span>
+			</div>
 
-			<span id="Aides">
+			<div id="aides">
 
 				<h3> Aides et services </h3>	
 
@@ -40,6 +40,6 @@
 				<p id="SignA"><a href="../invariants/pages_du_footer/signaler_un_abus.php">	Signaler un abus			</a>	</p>
 				<p id="Contact"><a href="../invariants/pages_du_footer/nous_contacter.php"> Nous contacter 	 		</a>	</p>
 
-			</span>
+			</div>
 		</div>
 	</footer>

@@ -1,20 +1,439 @@
 /***************************************************propriétés de la police **********************************************/
-body
+.page
 {
 	font-family:Verdana, Arial, serif;
 	font-size:0.7em;
 	background-color: white;
 }
+#td1, #td2, #td3, #td4
+{
+	font-size:1.3em;
+}
+a
+{
+	text-decoration: none;
+	color:#035dbd;
+	font-weight: bold;
+}
+.titre_site
+{
+	font-size:1.6em;
+}
 header
 {
-	width:1200px;
-	margin:auto;
+	width:1141px;
+}	
+.my_button
+{
+	color:#c3ee7f;
+	font-weight: bold;
+}
+.titre_annonce
+{
+	 font-size: 2em;	
 }
 
 /***************************************************propriétés visuels ***************************************************/
-#log, #search_bar, section, section article, section aside, .complement_connection
+.page
+{
+	width:1100px;	
+	margin-left: auto;
+	margin-right: auto;
+}
+#logo
+{
+	float:left;
+	margin-right: 1px;
+}
+.titre_site
 {
 	display:inline-block;
-	background-color: red;
+	margin-left: 6%;
+	margin-top: 0%;
+	width: 40%;
+	margin-bottom: 0%;
+	font-family: cursive;
+
+}
+#pseudo
+{
+	padding-right: 1%;
+	display: block;
+}
+.my_button, #mdp
+{
+	padding-right: 1%;
+	display: inline-block;
+}
+.my_button
+{
+	padding-left: 5px;
+	margin-left: 0px;
+	margin-top: -22px;
+	border-radius: 7px;
+	width:36%;
+	vertical-align: bottom;
+	background-color: #035dbd;
+	padding-top: 19px;
+	padding-bottom: 19px;
+}
+.connection
+{
+	margin-top: -2%;
+	display:inline-block;
+	margin-left: 54%;
+	width: 20%;
+	left: 40px;
+}
+.connection_non_connecte
+{
+	
+	width: 30%;
+	min-width: 295px;	
+}
+.connection_connecte
+{
+	width: 18%;
+	min-width: 247px;
+	left: 15px
+}
+#recherche
+{
+	display:inline-block;
+	margin-left: 6%;
+	margin-top: -1%;
+	margin-right: 37%;	
+	clear:both;
+	position:absolute;
+}
+#navigation
+{
+	position: absolute;
+	width: 66%;
+	margin-bottom: 0%;
+	margin-top:-2%;
+}
+#td1
+{
+	padding-left: 5%;
+	border-right: 1px solid #035dbd;
+	
+}
+#td2
+{
+	padding-left: 4%;
+	border-right:1px solid #035dbd;
+
+}
+#td3
+{
+	padding-left: 7%;
+	border-right:1px solid #035dbd;
+}
+#td4
+{
+	padding-left: 5%;
+}
+table
+{
+	background-color: #c3ee7f;
+	border-radius: 7px;
+}
+#panier
+{
+	float:right;
+	margin-top:-34px;
+	margin-bottom: 5px;
+}
+.compte
+{
+	clear:both;
+	padding-bottom: 7%;
+}
+.cadre_connexion
+{
+
+	border-left:1px solid #c3ee7f;
+	border-bottom: 1px solid #c3ee7f;
+	border-top: none;
+	border-right:none;
+	border-radius: 10px 0px 10px 10px;
+	background-color: #c3ee7f;
+}
+table
+{
+	width:100%;
+}
+#footer
+{
+	width:96%;
+	min-width: 1000px;
+}
+#foot
+{
+	position:relative;
+	right: -6px;
+	bottom: -65px;
+	
+}
+#association, #a_propos, #aides
+{
+	float: left;
+	padding-right: 16%;
+	padding-left:2%;
+	background-color:#c3ee7f;
+	width:14%;
+}
+#association	
+{
+	border-radius: 10px 0px 0px 10px;
+	width:18%;
+}
+#aides
+{
+	border-radius:0px 10px 10px 0px;
+}
+.nav_compte
+{
+	float:left;
+}
+.produit_simple
+{
+
+}
+*
+{
+	position:relative;
+}
+.complement_connexion
+{
+	display: inline-block;
+}
+.complement_connexion + .complement_connexion
+{
+	margin-left: 18px;
+}
+.produit_detail
+{
+	margin-top: 25px;
+}
+.reglement
+{
+	display:inline-block;
+	position:absolute;
+	right:100px;
+	bottom:0;
+}
+.image_annonce
+{
+	border:1px solid #b3b3b3;
+	width:400px;
+}
+.image_produit
+{
+	margin:auto;
+	width:50%;
+}
+.titre_annonce
+{
+	margin-left: 10px;
+}
+.info_produit_detail, .image_annonce
+{
+	display: inline-block;
+	vertical-align: top;
+}
+.administration, .deconnexion
+{
+	display:inline-block;
+}
+.administration
+{
+	margin-left: 45px;
 }
 
+#fruits,#legumes
+{
+	margin-top: 50px;
+	width: 512px;
+	height: 320px;
+}
+/*****SIMON*****/
+.page 
+{
+	background: url("../images/images_site/herbe.JPEG") fixed no-repeat center;
+	background-size: cover;
+}
+
+
+#soleil1, #soleil13
+{
+ position: absolute;
+ top:300px;
+ left: -107px;
+ width: 200px;
+ height: 200px;
+}
+#soleil2, #soleil14
+{
+ position: absolute;
+ top:232px; 
+ left:-33px;
+ width: 200px;
+ height: 200px;
+}
+#soleil3, #soleil15
+{
+ position: absolute;
+ top:173px; 
+ left:53px;
+ width: 200px;
+ height: 200px;
+}
+#soleil4, #soleil16
+{
+ position: absolute;
+ top:126px; 
+ left:137px;
+ width: 200px;
+ height: 200px;
+}
+#soleil5,#soleil17
+{
+ position: absolute;
+ top:112px; 
+ left:234px;
+ width: 200px;
+ height: 200px;
+}
+#soleil6, #soleil18
+{
+ position: absolute;
+ top:111px; 
+ left:343px;
+ width: 200px;
+ height: 200px;
+}
+#soleil12, #soleil24
+{
+ position: absolute;
+ top:300px;
+ right: -40px;
+ width: 200px;
+ height: 200px;
+}
+#soleil11, #soleil23
+{
+ position: absolute;
+ top:226px; 
+ right:32px;
+ width: 200px;
+ height: 200px;
+}
+#soleil10, #soleil22
+{
+ position: absolute;
+ top:168px; 
+ right:115px;
+ width: 200px;
+ height: 200px;
+}
+#soleil9, #soleil21
+{
+ position: absolute;
+ top:130px; 
+ right:207px;
+ width: 200px;
+ height: 200px;
+}
+#soleil8, #soleil20
+{
+ position: absolute;
+ top:112px; 
+ right:317px;
+ width: 200px;
+ height: 200px;
+}
+#soleil7, #soleil19
+{
+ position: absolute;
+ top:110px; 
+ right:428px;
+ width: 200px;
+ height: 200px;
+}
+
+/******MON COMPTE***/
+.grand_cadre, .grand_cadre2,.grand_cadre3
+{
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: white;
+	background-color: rgba(255, 255, 255 , 0.6);
+	opacity: 0,6;
+}
+
+h1,#b1,#b2,#b3
+{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#logo_i_need_eat
+{
+	width: 100;
+	height: 60px;
+}
+
+strong
+{
+	font-size: 12px;
+	font-family: arial;
+	text-decoration: none;
+	line-height: 40px;
+}
+
+h1
+{
+	font-size: 20px;
+	text-align: center;
+}
+.nav_compte
+{
+	left: -70px
+}
+.compte_formulaire,.informations_formulaire
+{
+	display: inline;
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: rgba(255, 255, 255, 0.7);
+	margin-bottom: 1%;
+	left: -70px;
+	width: 40%;
+}
+.informations_formulaire
+{
+	left: 400px;
+	position: absolute;
+}
+
+/******ANNONCE********/
+.informations_annonce
+{
+	width: 40%;
+	display: inline-block;
+	margin-top: 25px;
+	margin-left: 30%;
+    background-color: rgba(255, 255, 255 , 0.6);
+
+}
+.mdp_oublie
+{
+	margin-top: 4%;
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: rgba(255, 255, 255 , 0.6);
+	margin-bottom: 1%;
+	
+}

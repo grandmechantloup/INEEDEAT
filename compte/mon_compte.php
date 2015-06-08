@@ -6,7 +6,7 @@
 	<meta charset = "utf-8"/>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-<body>
+<body class="page">
 	
 	<nav class="nav_compte">
 		<ul>
@@ -25,7 +25,7 @@
 				<a href="../invariants/traitement_deconnexion.php" <p>Se déconnecter</p> </a>
 
 				<fieldset class="grand_cadre3">
-				<a href="../accueil/accueil.php" ><img src="../images/images_site/logo_i_need_eat.png" border="0"></a>
+				<a href="../accueil/accueil.php" ><img src="../images/images_site/logo_i_need_eat.png" id="logo_i_need_eat" border="0"></a>
 					<h1>
 						Modification de mes informations personnelles
 					</h1>

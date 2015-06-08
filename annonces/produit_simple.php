@@ -1,5 +1,5 @@
 <a href="../annonces/produit_detail.php?id_annonce=<?php echo $donnees['id_annonce'];?>">
-<article>
+<article class="produit_simple">
 	<p><?php echo $donnees['Date_publication']; ?></p>
 	<p> 
 		<?php

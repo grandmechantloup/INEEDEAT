@@ -64,11 +64,7 @@ fieldset
 
 }
 
-.compte_formulaire
-{
-	position: relative;
-	bottom: 167px;
-}
+
 
 
 
@@ -78,8 +74,4 @@ fieldset
 
 
 }
-body
-{
-	background: url("../images/images_site/fruits_et_legumes.jpeg") fixed no-repeat center;
-	background-size: cover;
 

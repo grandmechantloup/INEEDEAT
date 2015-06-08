@@ -6,7 +6,7 @@
 	<meta charset = "utf-8"/>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-<body>
+<body class="page">
 	<a class="../invariants/traitement_deconnexion.php" href="" > Se deconnecter</a>
 	<fieldset class="cadre_principal">
 		

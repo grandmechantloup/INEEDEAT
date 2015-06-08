@@ -3,13 +3,13 @@
 	<head>
 
 			<meta charset="utf-8" />
-				<link rel="stylesheet" href="../css/style_formulaire.css" />
+				<link rel="stylesheet" href="../css/style.css" />
 		<title>Formualire d'inscription</title>
       <script type="text/javascript" src="verif_inscription.js"></script>
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 	</head>
 	  
-	<body>
+	<body class="page">	
+		<?php include("../invariants/header.php"); ?>
 		
 		<h1>
 			Formulaire d'inscription
@@ -38,9 +38,26 @@
 			
 			<label for="Verif_Mdp"> Vérification de votre mot de passe(*):<label>
 			<input type="password" name="Verif_Mdp" id="Verif_Mdp" placeholder="upZcuMu9@"size="30" required/></p>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
 			
-		</fieldset>
+	
+		<h4>(*) Ces champs sont obligatoires pour valider l'inscription.</h4>
+	
+		  
+   			<p class="J_accepte_les_CGU">
+       			<br/>
+       				<input type="checkbox" name="CGU" id="CGU" required/> 	<label for="CGU">J'accepte les conditions généralles d'utilisation </label>
+       			<br/>
+       			<br/>
+  			</p>
+  			<input type="submit" value="Valider" />
+
 		
+		</fieldset>
+
 		<fieldset class="informations_formulaire">
 			
 			<legend>Vos coordonees</legend>
@@ -70,17 +87,7 @@
 				<label for="Naissance"> Votre date de naissance</label> : <input type="date" name="Naissance" id="Naissance" placeholder="Ex: 1978/10/23" size="15" value="<?php if (isset($_POST['Naissance'])) echo $_POST['Naissance'];?>"/></p>
 		</fieldset>
 
-	
-		<h4>(*) Ces champs sont obligatoires pour valider l'inscription.</h4>
-	
-		  
-   			<p class="J_accepte_les_CGU">
-       			<br />
-       				<input type="checkbox" name="CGU" id="CGU" required/> 	<label for="CGU">J'accepte les conditions généralles d'utilisation </label>
-       			<br />
-  			</p>
-  			<input type="submit" value="Valider" />
-
 		</form>
+		<?php include("../invariants/footer.php"); ?>
 		</body>
 </html>

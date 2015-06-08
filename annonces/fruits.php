@@ -48,6 +48,7 @@
 							  ON c.id_categorie=a.id_categorie
 							  INNER JOIN varietes v
 							  ON v.id_variete=a.id_variete 
+							  WHERE c.Fruit_legume = 0
 							  ORDER BY id_annonce DESC 
 							  LIMIT '.$premiere_annonce_affichee.', 5');
 		while($donnees=$reponse->fetch())

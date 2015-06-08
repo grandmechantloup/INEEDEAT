@@ -3,11 +3,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="../css/style_annonce.css" />
+	<link rel="stylesheet" href="../css/style.css" />
 	<title> Ajouter une annonce </title>
   
 </head>
-<body>
+<body class="page">	
 <?php include("../invariants/header.php"); ?>
     <form method="POST" action="traitement_annonce.php" enctype="multipart/form-data" >
 <fieldset class="informations_annonce">
@@ -37,10 +37,11 @@ Texte de l'annonce :<br/> <TEXTAREA rows="10" cols="50" name="Description"></TEX
 	 <label for="mon_fichier"> Ajouter une image :</label><br/>
      <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
      <input type="file" name="mon_fichier" id="mon_fichier" /> 
-Valider ma nouvelle annonce <input type="submit" name="valider"/> 
+	 <input type="submit" name="valider"/> 
 
 </fieldset>
 </p>
 </form>
+<?php include("../invariants/footer.php"); ?>
 </body>
 </html>
