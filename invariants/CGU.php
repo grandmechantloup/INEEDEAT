@@ -5,9 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<title>CGU</title>
 </head>
-
-<body>
-
+<body class="page">
 <?php include ("../invariants/header.php") ?>
 		<fieldset>
 			<p>Conditions générales d'utilisation:</p>
@@ -52,7 +50,6 @@
 				contact@ineedeat.fr
 			</textarea>
 		</fieldset>
-
-
-
 <?php include ("../invariants/footer.php") ?>
+</body>
+</html>
