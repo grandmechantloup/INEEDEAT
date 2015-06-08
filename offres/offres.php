@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<meta charset="utf-8"/>
 </head>
-<body>
+<body class="page">
 		<?php include("../invariants/header.php");?>
 		<br/>
 		<?php
@@ -42,28 +42,31 @@
 			$limit=$_GET['limit']=$limit-5;
 		}
 		$reponse->closeCursor();
-		$reponse=$bdd->query('SELECT a.Titre, c.Categorie, v.Variete, a.Prix, a.Quantite, a.Date_publication, a.id_annonce
+		$reponse=$bdd->query('SELECT a.Titre, c.Categorie, v.Variete, a.Prix, a.Quantite, a.Date_publication, a.id_annonce, a.Extension_upload
 							  FROM annonces a
 							  INNER JOIN categorie c
 							  ON c.id_categorie=a.id_categorie
 							  INNER JOIN varietes v
-							  ON v.id_variete=a.id_variete
-							  ORDER BY a.id_annonce DESC 
+							  ON v.id_variete=a.id_variete 
+							  ORDER BY id_annonce DESC 
 							  LIMIT '.$premiere_annonce_affichee.', 5');
 		while($donnees=$reponse->fetch())
 		{
 			include("../annonces/produit_simple.php");
-			$req=$bdd->prepare('SELECT status_cma
-								FROM utilisateurs 
-								WHERE id_utilisateur=?');
-			$req->execute(array($_SESSION['id_utilisateur']));
-			$donnees2=$req->fetch(); 
-			if($donnees2['status_cma']==1 OR $donnees2['status_cma']==2)
-			{ 
-				$req->closeCursor();
-				?>
-				<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce']?>"><input type="button" value="Supprimer"/></a>
-				<?php
+			if(isset($_SESSION['id_utilisateur']))
+			{
+				$req=$bdd->prepare('SELECT status_cma
+									FROM utilisateurs 
+									WHERE id_utilisateur=?');
+				$req->execute(array($_SESSION['id_utilisateur']));
+				$donnees2=$req->fetch(); 
+				if($donnees2['status_cma']==1 OR $donnees2['status_cma']==2)
+				{ 
+					$req->closeCursor();
+					?>
+					<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce']?>"><input type="button" value="Supprimer"/></a>
+					<?php
+				}
 			}
 		}	
 		$reponse->closeCursor();
@@ -71,6 +74,6 @@
 		<a href="../offres/offres.php?limit=<?php echo $limit-5;?>"> <input type="button" name="précédent" value="précédent"/> </a>
 		<a href="../offres/offres.php?limit=<?php echo $limit+5;?>"> <input type="button" name="suivant" value="suivant"/> </a>
 
-		<<?php include("../invariants/footer.php") ?>
+		<?php include("../invariants/footer.php") ?>
 </body>
 </html>

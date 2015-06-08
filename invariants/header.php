@@ -4,19 +4,18 @@
 			<a href="../accueil/accueil.php">
 				<img src="../images/images_site/logo_i_need_eat_miniature.png" alt="logo I need Eat" title="page d'accueil" id="logo">
 			</a>
-			<h2> Vente et échange de fruits et légumes frais </h2>
+			<h1 class="titre_site"> Vente et échange de fruits et légumes frais </h1>
 		</p>
 	</article>
 	<div id="recherche">
-		
 		<form action="" method="post" >
 			<p>
-				<input type="search" name="recherche" id="Barre" placeholder="Fruits, légumes, ..." />
-				<input type="submit" id="bt_recherche"  >
+				<input type="search" name="recherche" id="Barre" placeholder="Fruits, légumes, ..." size="45" />
+				<input type="submit" value="Rechercher" id="bt_recherche"  >
 			</p>
 		</form>
 	</div>
-	<section>		
+	<section class="connection">		
 		<?php
 		if(isset($_SESSION['pseudo']))
 		{
@@ -33,6 +32,7 @@
 			<td id="td1"><a href="../offres/offres.php">Offres</a></td>
 			<td id="td2"><a href="../formulaires/annonce.php">Poser une annonce</a></td>
 			<td id="td3"><a href="../compte/mes_annonces.php">Mes annonces</a></td>
+			<td id="td4"><a href="../compte/mes_annonces.php">Mon panier</a></td>
 		</table>
 	</nav>
 </header>

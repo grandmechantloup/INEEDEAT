@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<meta charset="utf-8"/>
 </head>
-<body>
+<body class="page">
 <?php
 include("../invariants/header.php");
 require("../bdd/connexion.php"); 

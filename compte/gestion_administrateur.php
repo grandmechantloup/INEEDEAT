@@ -9,7 +9,7 @@
 	<title> Gestion administrateur </title>
   
 </head>
-<body>
+<body class="page">
 <?php include("../invariants/header.php"); ?>
     <form method="POST" action="gestion_administrateur.php" >
 <p>

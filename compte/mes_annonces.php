@@ -8,7 +8,7 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<meta charset = "utf-8"/>
 </head>
-<body>
+<body class="page">
 	<?php 
 	if(isset($_SESSION['id_utilisateur']))
 	{
