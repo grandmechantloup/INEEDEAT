@@ -19,7 +19,7 @@
 						INNER JOIN categorie c
 					    ON c.id_categorie=a.id_categorie
 					    INNER JOIN varietes v
-					    ON v.id_categorie=c.id_categorie
+					    ON v.id_variete=a.id_variete
 						WHERE p.id_utilisateur=?');
 	$req->execute(array($_SESSION['id_utilisateur']));
 	while($donnees=$req->fetch())

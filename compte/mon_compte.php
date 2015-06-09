@@ -65,8 +65,7 @@
 					?>
 					<form method="POST" action="../compte/traitement_modifier_info.php">
 						<strong>
-						Adresse : <input type="text" name="nouveau_num_rue" value="<?=$donnees['Num_rue']?>" size="3"/> 
-						<input type="text" name="nouvelle_adresse" value="<?=$donnees['Adresse']?>" size="40"/> <br/>
+						Adresse : <input type="text" name="nouvelle_adresse" value="<?=$donnees['Adresse']?>" size="40"/> <br/>
 						Code postal : <input type="text" name="nouveau_code_postal" value="<?=$donnees['Code_postal']?>" size="10"/> <br/>Ville : <input type="text" name="nouvelle_ville" value="<?=$donnees['Ville']?>" size="40"/><br/>
 						Region : <input type="text" name="nouvelle_region" value="<?=$donnees['Region']?>" size="40"/><br/>
 						
@@ -93,8 +92,16 @@
 				<?php
 				$req=$bdd->prepare('SELECT * FROM utilisateurs WHERE id_utilisateur=?');
 				$req->execute(array($_SESSION['id_utilisateur']));
-				$donnees=$req->fetch();
-				echo 'Civilité : '.$donnees['Civilite']; ?><br/>
+				$donnees=$req->fetch(); ?>
+				Civilité : 
+				<?php
+				if( isset($donnees['Civilite']) AND $donnees['Civilite']==0) 
+					{
+						?>
+						Madame
+						<?php
+					}
+					?><br/>
 				<?php echo 'Nom : '.$donnees['Nom']; ?><br/>
 				<?php echo 'Prénom : '.$donnees['Prenom']; ?><br/>
 				<?php echo 'Téléphone : 0'.$donnees['Tel']; ?><br/>
@@ -107,7 +114,7 @@
 					<h1> ----------------------------------------------- Adresse ---------------------------------------------- </h1> 
 					<fieldset class="adresse">
 					<p>
-					<?php echo $donnees['Num_rue'].' '.$donnees['Adresse']; ?> <br/>
+					<?php echo $donnees['Adresse']; ?> <br/>
 					<?php echo $donnees['Code_postal'];	?> 
 					<?php echo $donnees['Ville']; ?> <br/>
 					<?php echo $donnees['Region']; ?> <br/>
