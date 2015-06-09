@@ -5,7 +5,7 @@
 	font-size:0.7em;
 	background-color: white;
 }
-#td1, #td2, #td3, #td4
+#td1, #td2, #td3, #td4, #td5
 {
 	font-size:1.3em;
 }
@@ -154,6 +154,12 @@ h2
 #td4
 {
 	padding-left: 5%;
+	border-right:1px solid #035dbd;
+}
+#td5
+{
+	padding-left: 5%;
+	
 }
 table
 {

@@ -33,6 +33,7 @@
 			<td id="td2"><a href="../formulaires/annonce.php" class="liens_invariants">Poser une annonce</a></td>
 			<td id="td3"><a href="../compte/mes_annonces.php" class="liens_invariants">Mes annonces</a></td>
 			<td id="td4"><a href="../compte/panier.php" class="liens_invariants">Mon panier</a></td>
+			<td id="td5"><a href="../forum/forum.php" class="liens_invariants">Forum</a></td>
 		</table>
 	</nav>
 </header>
