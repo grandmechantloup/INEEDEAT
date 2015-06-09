@@ -2,6 +2,7 @@
 include("../bdd/connexion.php"); 
 $email = $_POST['Email'];
 $pseudo = $_POST['Pseudo'];
+$hash_pass=sha1($_POST['Mdp']);
 
 if(empty($_POST['Email']) OR empty($_POST['Pseudo']) OR empty($_POST['Mdp']) OR empty($_POST['Verif_Mdp']))
 {
@@ -41,7 +42,7 @@ else
                         'Prenom' => $_POST['Prenom'],
                         'Civilite' => $_POST['Civilite'],
                         'Naissance' => $_POST ['Naissance'],
-                        'Mdp' => $_POST['Mdp'],
+                        'Mdp' => $hash_pass,
                         'Tel' => $_POST['Tel'],
                         'Email' => $_POST['Email'],
                         'Region' => $_POST['Region'],

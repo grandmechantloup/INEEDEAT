@@ -1,5 +1,7 @@
 <?php session_start(); 
 require("../bdd/connexion.php");
+$ancien_mdp=sha1($_POST['ancien_mdp']);
+$nouveau_mdp=sha1($_POST['nouveau_mdp']);
 $req=$bdd->prepare('SELECT Mdp FROM utilisateurs WHERE id_utilisateur=?');
 $req->execute(array($_SESSION['id_utilisateur']));
 $donnees=$req->fetch();
@@ -13,13 +15,13 @@ if(isset($_POST['nouveau_pseudo']) AND $_POST['nouveau_pseudo']!=NULL)
 	$reponse1->closeCursor();
 	$_SESSION['pseudo']=$_POST['nouveau_pseudo'];
 }
-if(isset($_POST['ancien_mdp']) AND $_POST['ancien_mdp']==$donnees['Mdp'])
+if(isset($_POST['ancien_mdp']) AND $ancien_mdp==$donnees['Mdp'])
 {
 	if(isset($_POST['nouveau_mdp']) AND $_POST['nouveau_mdp']!=NULL AND $_POST['nouveau_mdp']===$_POST['confirmation_mdp'])
 	{
 		$reponse=$bdd->prepare('UPDATE utilisateurs SET Mdp=:nouveau_mdp WHERE id_utilisateur=:id_utilisateur');
 		$reponse->execute(array(
-			'nouveau_mdp'=>$_POST['nouveau_mdp'],
+			'nouveau_mdp'=>$nouveau_mdp,
 			'id_utilisateur'=>$_SESSION['id_utilisateur']
 			));
 		$reponse->closeCursor();

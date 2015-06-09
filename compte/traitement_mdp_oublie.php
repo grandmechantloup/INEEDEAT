@@ -5,7 +5,18 @@ $message_envoye = "Nous vous envoyons un message contenant votre mot de passe";
 $message_non_envoye = "La récupération du mot de passe a échouée";
 $email_eronne = "L'adresse entrèe n'est pas valide";
 $ineedeat = "simongatty3@gmail.com";
-
+function Generer_mdp()
+{
+	$mdp="";
+	$possible="123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
+	$taille_mdp=61;
+	for($i=0; $i<=7; $i++)
+	{
+		$caractere = substr($possible, mt_rand(0, $taille_mdp-1), 1);
+		$mdp .= $caractere;
+	}
+	echo $mdp;
+}
 
 if (isset($_POST['envoi']))
      { 
@@ -19,7 +30,7 @@ if (isset($_POST['envoi']))
 		$objet = "I need eat mot de passe oublié";
 		$message = "Bonjour cher membre voici vos informations :\n";
 				   "Votre pseudo :" .$donnees['Pseudo']."\n" .
-		           "Votre mot de passe :".$donnees['Mdp']."\n";
+		           "Votre mot de passe :"Generer_mdp()"\n";
 		$headers  = 'From:'.$ineedeat. "\r\n"; 
 		
 		 
