@@ -29,8 +29,8 @@
 				<?php echo $donnees['Titre']; ?>
 		</h1>
 	
-		<aside class="image_annonce">
-			<p class="image_produit"><img src="../images/images_annonces/<?php echo $donnees['id_annonce'].'.'.$donnees['Extension_upload']; ?>" alt="image_produit" id="image_produit"/></p>
+		<aside class="image_annonce" style="background-image:url('../images/images_annonces/<?php echo $donnees['id_annonce'].'.'.$donnees['Extension_upload']; ?>');">
+			
 		</aside>
 
 		<article class="info_produit_detail">

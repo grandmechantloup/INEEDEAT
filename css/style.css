@@ -25,6 +25,10 @@ a
 	font-size:1.6em;
 	font-family: cursive;	
 }
+.titre_panier
+{
+	font-size: 2em;
+}
 header
 {
 	width:1141px;
@@ -249,13 +253,18 @@ table
 }
 .image_annonce
 {
+	display: inline-block;
 	border:1px solid #b3b3b3;
 	width:400px;
+	height:400px;
+	background-position: 50% 50%;
+	background-repeat:no-repeat;
 }
 .image_produit
 {
 	margin:auto;
 	width:50%;
+
 }
 .titre_annonce
 {
@@ -575,6 +584,7 @@ background-position:50% 50%;
 	width:88%;
 	margin-left: 2%;
 	padding-left:4%;
+	padding-bottom: 1%;
 }
 .info_produit_simple h2
 {
@@ -596,4 +606,13 @@ background-position:50% 50%;
 .prix_quantite div 
 {
 	margin-top: 8px;
+}
+.titre_panier
+{
+	width:200px;
+	margin-left: 36px;
+}
+#image_produit
+{
+
 }
