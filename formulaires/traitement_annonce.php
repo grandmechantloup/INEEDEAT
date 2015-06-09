@@ -56,15 +56,15 @@ $req = $bdd -> query('SELECT MAX(id_annonce) FROM annonces');
 $name = $req->fetch();
 $nom = "../images/images_annonces/{$name[0]}.{$extension_upload}";
 $resultat = move_uploaded_file($_FILES['mon_fichier']['tmp_name'],$nom);
-header('location:http://localhost/INEEDEAT/compte/mes_annonces.php?');
+header('location:../compte/mes_annonces.php?');
 }
 
 else{
-    header('location:http://localhost/INEEDEAT/formulaires/annonce.php?erreur=' .$erreur);
+    header('location:../formulaires/annonce.php?erreur=' .$erreur);
 }
 }
 else{
-    header('location:http://localhost/INEEDEAT/formulaires/annonce.php?erreur=' );
+    header('location:../formulaires/annonce.php?erreur=' );
 }
 ?> 
 

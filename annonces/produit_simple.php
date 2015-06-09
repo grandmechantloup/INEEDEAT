@@ -1,25 +1,27 @@
 <a href="../annonces/produit_detail.php?id_annonce=<?php echo $donnees['id_annonce'];?>">
 <article class="produit_simple">
-	<p><?php echo $donnees['Date_publication']; ?></p>
-	<p> 
+	<div class="date_produit_simple">
+		<?php echo $donnees['Date_publication']; ?>
+	</div>
+	<div class="image_produit_simple"> 
 		<?php
 		if(isset($donnees['Extension_upload']) AND $donnees['Extension_upload']!=NULL)
 		{
 		?>
-			<img src="../images/images_annonces/<?php echo $donnees['id_annonce'].'.'.$donnees['Extension_upload']; ?>" class="image_annonce"/> 
+			<div class="image" style="background-image:url('../images/images_annonces/<?php echo $donnees['id_annonce'].'.'.$donnees['Extension_upload']; ?>');"></div>
 		<?php
 		}
 		?>
-	</p>
-	<p>
-	<?php echo $donnees['Titre']; ?> <br/>
-	</p>
-	<p>
-	<?php echo $donnees['Categorie']; ?> > <?php echo $donnees['Variete']; ?>
-	</p>
-	<p>
-		<strong>prix</strong> : <?php echo $donnees['Prix']; ?>
-		<strong>Quantité restante</strong> : <?php echo $donnees['Quantite']; ?>
-	</p>
+	</div>
+	<div class="info_produit_simple">
+		<div class="titre_categorie">
+			<h2><?php echo $donnees['Titre']; ?></h2>
+			<?php echo $donnees['Categorie']; ?> > <?php echo $donnees['Variete']; ?>
+		</div>
+		<div class="prix_quantite">	
+			<div> <strong>prix</strong> : <span class="prix"><?php echo $donnees['Prix']; ?> €/Kg</span></div></br>
+			<div> <strong>Quantité restante</strong> : <span class="quantite"><?php echo $donnees['Quantite']; ?> Kg</span> </div>
+		</div>
+	</div>
 </article>
 </a>
