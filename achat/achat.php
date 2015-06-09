@@ -45,7 +45,7 @@
 
 <form name="formulaire_achat" id="formulaire_achat"  method="post" action="../achat/confirmation_achat.php?id_annonce=<?php echo $donnees['id_annonce'];?>">
 			<article class="achat_formulaire">
-				<p>
+				<p class="quantite_souhaitee">
 				<label for="Quantite"> Choisissez la quantité désirée (kg) :</label> <input type="Int" name="quantite_voulu" id="Quantite" 
 				required />
 				</p>

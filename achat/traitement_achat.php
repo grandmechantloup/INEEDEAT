@@ -81,7 +81,10 @@ $quantite_final=$quantite_restante-$quantite_voulu;
 
 $req->closeCursor();
 
-$req=$bdd->prepare('UPDATE annonces SET Quantite=?');
-$req->execute(array($quantite_final));
+$req=$bdd->prepare('UPDATE annonces SET Quantite=:quantite WHERE id_annonce=:id_annonce');
+$req->execute(array(
+	'quantite'=>$quantite_final,
+	'id_annonce'=>$_GET['id_annonce']
+	));
 header('location:../accueil/accueil.php');
 ?> 

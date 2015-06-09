@@ -694,3 +694,29 @@ background-position:50% 50%;
 	margin-bottom: 3%;
 	border-bottom: 1px solid black;	
 }
+.bouton_valider
+{
+	left:24px;
+	margin-left: 0px;
+	margin-top: 10px;
+	width:11%;
+	vertical-align: bottom;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	color:#c3ee7f;
+	font-weight: bold;
+	padding-left: 5px;
+	border-radius: 7px;
+	background-color: #035dbd;
+}
+.quantite_souhaitee
+{
+	left:25px;
+}
+.prix_a_payer
+{
+	left:57px;
+	font-size: 1.5em;
+	color:#035dbd;
+	font-weight: bold;
+}

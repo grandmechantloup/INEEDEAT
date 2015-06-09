@@ -44,7 +44,7 @@ else
 			</p>
 			<p class="info_prod">
 			<?php $Montant=$_POST['quantite_voulu']*$donnees['Prix'];?>
-				<strong>Prix à payer</strong> : <span class="quantite"> <?php echo $Montant;?>€ </span><br/>
+				<strong>Prix à payer</strong> : <span class="prix_a_payer"> <?php echo $Montant;?>€ </span><br/>
 			</p>				
 		</article>
 
