@@ -42,11 +42,11 @@
 			$req->execute(array($_GET['id_annonce']));
 			$donnees=$req->fetch();
 		
-			if($donnees[0]==1){
+			if($donnees1['Echange']==1){
 				
 			}
 			?>
-<form name="formulaire_achat" id="formulaire_achat"  method="post" action="../achat/confirmation_achat.php">
+<form name="formulaire_achat" id="formulaire_achat"  method="post" action="../achat/confirmation_achat.php?id_annonce=<?php echo $donnees['id_annonce'];?>">
 			<article class="achat_formulaire">
 				<p>
 				<label for="Quantite"> Choisissez la quantité désirée (kg) :</label> <input type="Int" name="Quantite" id="Quantite" 
