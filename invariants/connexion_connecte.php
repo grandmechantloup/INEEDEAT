@@ -18,7 +18,7 @@
 		$req=$bdd->prepare('SELECT status_cma FROM utilisateurs WHERE id_utilisateur=?');
 		$req->execute(array($_SESSION['id_utilisateur']));
 		$donnees=$req->fetch();
-		if($donnees['status_cma']==1 OR $donnees['status_cma']==2)
+		if($donnees['status_cma']==2)
 		{ 
 			?>
 			<div class="administration">

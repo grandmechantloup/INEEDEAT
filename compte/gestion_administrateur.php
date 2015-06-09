@@ -11,7 +11,14 @@
 </head>
 <body class="page">
 	
-<?php include("../invariants/header.php"); ?>
+<?php include("../invariants/header.php");
+include("../bdd/connexion.php");
+$req = $bdd->prepare('SELECT Status_cma FROM utilisateurs WHERE id_utilisateur LIKE ? ');
+		$req -> execute(array($_SESSION['id_utilisateur']));
+		$donnees=$req->fetch();
+if($donnees['Status_cma']==2){
+ ?>
+
 <div class="page_admin">
 	    <form method="POST" action="gestion_administrateur.php" >
 	<p>
@@ -19,7 +26,7 @@
 	</p>
 	</form>
 	<?php 
-	include("../bdd/connexion.php");
+	
 
 	if(isset($_POST['recherche'])){
 		$req = $bdd->prepare('SELECT Nom, Prenom, Pseudo, Email, Region, Ville, id_utilisateur FROM utilisateurs WHERE Pseudo LIKE ? ');
@@ -52,6 +59,10 @@
 		}
 		header('location:../compte/gestion_administrateur.php');
 	}
+}
+else{
+header('location:../accueil/accueil.php');
+}
 ?>
 </div>
 </body>
