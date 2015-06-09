@@ -10,7 +10,7 @@
 	<?php include("../invariants/header.php"); ?>
 	<div class="page_offres">
 		<?php
-		include("../bdd/connexion.php");
+		require("../bdd/connexion.php");
 		$req = $bdd->prepare('SELECT v.Variete, a.Date_publication,a.Titre, a.Prix, a.Quantite,a.id_annonce, a.Extension_upload, c.Categorie FROM annonces a
 							  INNER JOIN categorie c
 							  ON c.id_categorie=a.id_categorie

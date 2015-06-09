@@ -7,7 +7,7 @@
 }
 #td1, #td2, #td3, #td4, #td5
 {
-	font-size:1.3em;
+	font-size:14px;
 }
 a
 {
@@ -650,7 +650,20 @@ background-position:50% 50%;
 	width:200px;
 	margin-left: 36px;
 }
-#image_produit
+.categorie_forum
 {
-
+	border:1px solid black;
+	background-color: #b3b3b3;
+	width:50%;
+	padding:2%;
+	left: 10%;
+	top:1%;
+}
+.recette_cuisine, .caverne_astuce, .sante_fitness, .coin_blague
+{
+	font-size: 1.3em;
+	padding-left: 6%;
+	border-bottom: 1px solid black;
+	padding-bottom: 3%;
+	font-weight: bold;
 }

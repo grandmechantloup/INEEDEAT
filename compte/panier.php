@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<meta charset="utf-8"/>
 </head>
-<?php if(isset($_SESSION['id_utilisateur']))
+<?php echo $_SESSION['pseudo']; if(isset($_SESSION['id_utilisateur']))
 { ?>
 	<body class="page">
 	<?php
