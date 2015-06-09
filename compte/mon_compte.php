@@ -7,23 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body class="page">
-	
-	<nav class="nav_compte">
-		<ul>
-			<li><a href="../compte/mon_compte.php">Information du compte</a></li>
-			<li><a href="../compte/modifier_info_compte.php">Modifier Pseudo, mot de passe, email</a></li>
-			<li><a href="../compte/mes_annonces.php">Mes annonces</a></li>
-			<li><a href="#">Mes achats</a></li>
-		</ul>
-	</nav>
 		<?php 
 		require("../bdd/connexion.php");
 		if(isset($_GET['modifier_info']) AND $_GET['modifier_info']==1)
 		{
 		?>
 			<section>
-				<a href="../invariants/traitement_deconnexion.php" <p>Se déconnecter</p> </a>
-
+				
 				<fieldset class="grand_cadre3">
 				<a href="../accueil/accueil.php" ><img src="../images/images_site/logo_i_need_eat.png" id="logo_i_need_eat" border="0"></a>
 					<h1>
@@ -53,7 +43,7 @@
 		elseif(isset($_GET['modifier_info']) AND $_GET['modifier_info']==2)
 		{
 		?>
-				<a href="../invariants/traitement_deconnexion.php" <p>Se déconnecter</p> </a>
+			
 
 				<fieldset class="grand_cadre2">
 				<a href="../accueil/accueil.php" ><img src="../images/images_site/logo_i_need_eat.png" border="0"></a>
@@ -78,14 +68,14 @@
 		else
 		{
 			?>
-			<a class="deco" href="deconnection" <p>Se déconnecter</p> </a>
+			
 			<fieldset class ="grand_cadre">
 
 			<a href="../accueil/accueil.php" ><img src="../images/images_site/logo_i_need_eat.png" border="0"></a>
 			<section>
 				
 				<h1>
-					--------------------- Récapitulatif de mes informations personnelles ----------------------
+					--------------------- Récapitulatif de mes informations personnelles --------------------------
 				</h1>
 
 				<fieldset class="recap_info_personelles">
@@ -126,7 +116,7 @@
 
 
 				
-				<h1> ------------------------------------------- Mon compte --------------------------------------------	</h1>
+				<h1> ------------------------------------------- Mon compte ---------------------------------------------	</h1>
 				
 				<fieldset class"mc">
 				<p>

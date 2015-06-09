@@ -8,6 +8,7 @@
 </head>
 <body class="page">
 <?php include("../invariants/header.php"); ?>
+	<div class="cgu">
 		<fieldset>
 			<p>Conditions générales d'utilisation:</p>
 			<textarea rows="15" cols="150" readonly="">
@@ -51,6 +52,7 @@
 				contact@ineedeat.fr
 			</textarea>
 		</fieldset>
+	<div>
 <?php include("../invariants/footer.php") ?>
 </body>
 </html>

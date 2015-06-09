@@ -7,6 +7,7 @@
 </head>
 <body class="page">
 <?php include("../invariants/header.php"); ?>
+<div class="contact">
   <fieldset class="cadre_nous_contacter">
 
     <h1>Nous contacter</h1>
@@ -27,7 +28,7 @@
       <div style="text-align:center;"><input type="submit" name="envoi" value="Envoyer le message !" /></div>
     </form>
   </fieldset>
-      
+      </div>
 <?php include("../invariants/footer.php"); ?>
 </body>
 </html>

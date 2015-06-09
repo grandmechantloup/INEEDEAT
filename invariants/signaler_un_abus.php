@@ -1,15 +1,15 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="../css/style_signaler_un_abus.css" />
+	<link rel="stylesheet" href="../css/style.css" />
 	<title>Signaler un abus</title>
 </head>
 <body>
-<<?php include("header.php") ?>
-
-<h2>Signaler un abus</h2>
-<h1>Sur cette page vous pouvez signaler un abus, il s'agit de rapporter à l'administration du site, un comportement maladroit et/ou innapropprié.</h1>
+<?php include("../invariants/header.php") ?>
+<div class="signaler_abus">
+<h1>Signaler un abus</h1>
+<h2>Sur cette page vous pouvez signaler un abus, il s'agit de rapporter à l'administration du site, un comportement maladroit et/ou innapropprié.</h2>
 
 
 <p>Cette démarche vous permet de garder votre identité secrête.</p>
@@ -38,7 +38,7 @@
 
 
 <input type="submit" value="Envoyer" />
-
-<<?php include ("footer.php") ?>
+</div>
+<?php include ("footer.php") ?>
 </body>
 </html>

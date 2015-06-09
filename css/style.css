@@ -56,6 +56,12 @@ h2
 {
 	font-size: 1.3em;
 }
+.signaler_abus h1
+{
+	margin-left: 0%;
+	font-size: 1.4em;
+	text-decoration: underline;
+}
 /***************************************************propriétés visuels ***************************************************/
 .liens_invariants:hover
 {
@@ -108,7 +114,7 @@ h2
 	display:inline-block;
 	margin-left: 54%;
 	width: 20%;
-	left: 40px;   /**************************** à voir ******************************/
+	left: 17px;   /**************************** à voir ******************************/
 }
 .connection_non_connecte
 {
@@ -146,18 +152,19 @@ h2
 }
 #td2
 {
-	padding-left: 4%;
+	padding-left: 2%;
 	border-right:1px solid #035dbd;
 
 }
 #td3
 {
-	padding-left: 7%;
+	padding-left: 4%;
 	border-right:1px solid #035dbd;
 }
 #td4
 {
-	padding-left: 5%;
+	padding-left: 3%;
+	padding-right:1%;
 	border-right:1px solid #035dbd;
 }
 #td5
@@ -254,8 +261,8 @@ table
 {
 	display:inline-block;
 	position:absolute;
-	right:65px;
-	bottom:103px;
+	right:101px;
+	bottom:242px;
 }
 .image_annonce
 {
@@ -291,6 +298,9 @@ table
 }
 .page_admin
 {
+	border:1px solid #b3b3b3;
+	padding:2%;
+	background-color: white;
 	display: inline-block;
 	position: absolute;
 	top:200px;
@@ -474,7 +484,25 @@ table
 }
 .aides
 {
+	border:1px solid #b3b3b3;
+	padding:2%;
+	margin-top: 2%;
 	background-color: white;
+}
+.cgu
+{
+	margin-top: 2%;
+}
+.signaler_abus
+{
+	padding:1%;
+	margin-top: 2%;
+	border:1px solid #b3b3b3;
+	background-color: white;
+}
+#abus
+{
+	margin-top:1%;
 }
 .mdp_oublie
 {
@@ -487,6 +515,11 @@ table
 .nous_contacter
 {
 	color:#035dbd;
+}
+.contact
+{
+	background-color: white;
+	margin-top: 4%;
 }
 .nous_contacter:hover
 {
@@ -510,8 +543,7 @@ table
 
 h1,#b1,#b2,#b3
 {
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 1%; 
 }
 
 #logo_i_need_eat

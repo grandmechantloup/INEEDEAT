@@ -29,7 +29,7 @@
 				<?php echo $donnees['Titre']; ?>
 		</h1>
 	
-		<aside class="image_annonce" style="background-image:url('../images/images_annonces/<?php echo $donnees['id_annonce'].'.'.$donnees['Extension_upload']; ?>');">
+		<aside class="image_annonce" style="background-image:url('../images/images_annonces/<?php echo $donnees['id_annonce'].'.'.$donnees['Extension_upload']; ?>'); background-size:contain;">
 			
 		</aside>
 
