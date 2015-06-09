@@ -3,12 +3,12 @@
 <html>
 <head>
 	<title>Forum</title>
-	<link rel="stylesheet" href="../css/style_final.css" />
+	<link rel="stylesheet" href="../css/style.css" />
 	<meta charset="utf-8"/>
 </head>
 <body>
 
-<?php include("../bdd/connexion.php");
+<?php require("../bdd/connexion.php");
 
 if(isset($_POST['titre_topic'])){
 $req=$bdd->prepare('INSERT INTO forum (titre, description, date_publication ,categorie, id_utilisateur) VALUES (:titre, :description, NOW(),:categorie,:id_utilisateur)');
@@ -19,7 +19,7 @@ $req=$bdd->prepare('INSERT INTO forum (titre, description, date_publication ,cat
 		'id_utilisateur'=> $_SESSION['id_utilisateur']
 		));
 
-header('location:http://localhost/INEEDEAT/forum/forum.php?categorie='.$_POST['categorie']);
+header('location:../forum/forum.php?categorie='.$_POST['categorie']);
 }
 
 ?>

@@ -667,3 +667,12 @@ background-position:50% 50%;
 	padding-bottom: 3%;
 	font-weight: bold;
 }
+.ajout_sujet
+{
+	border:1px solid black;
+	background-color: #b3b3b3;
+	width:50%;
+	padding:2%;
+	left: 10%;
+	top:5%;
+}
