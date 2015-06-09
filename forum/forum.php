@@ -51,10 +51,10 @@
 				<article class="texte_topic">
 					<textarea rows="6" cols="52" name="texte_topic" placeholder="Taper votre texte" required></textarea> 
 				</article></br>
+				<input type="hidden" name="categorie" value=<?php echo $_GET['categorie']; ?>>
 				<aside class="topic_valider">
 					<input type="submit" name="valider"/>
 				</aside>
-				<input type="hidden" name="categorie" value=<?php echo $_GET['categorie']; ?>>
 			</form>
 		</section>
 		<?php

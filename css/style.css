@@ -676,3 +676,19 @@ background-position:50% 50%;
 	left: 10%;
 	top:5%;
 }
+.ensemble_sujet
+{
+	width:50%;
+	background-color: white;
+	border: 1px solid black;
+	left:10%;
+	top:10%;
+	padding-bottom: 0%;
+}
+.un_sujet
+{
+	padding-bottom: 2%;
+	padding-left: 2%;
+	margin-bottom: 3%;
+	border-bottom: 1px solid black;	
+}
