@@ -8,15 +8,28 @@
 </head>
 <body class="page">
 <?php include("../invariants/header.php");?>
-<?php require("../bdd/connexion.php"); ?>
-<?php $reponse=$bdd->prepare('SELECT a.Titre, a.Prix, a.Quantite, u.Pseudo, a.id_annonce	
+<?if(empty($_POST['Quantite']))
+{
+    header('location:../achat/achat.php');
+}
+	else
+	{
+		require("../bdd/connexion.php"); ?>
+		<?php $reponse=$bdd->prepare('SELECT a.Titre, a.Prix, a.Quantite, u.Pseudo, a.id_annonce	
 								  FROM annonces a
 								  INNER JOIN utilisateurs u
 								  ON u.id_utilisateur=a.id_utilisateur
 								  WHERE id_annonce=?');
 	$reponse->execute(array($_GET['id_annonce']));
 	$donnees=$reponse->fetch();
-	?>
+		if ($_POST['Quantite']>$donnees['Quantite'])
+		{
+			echo "La quantité choisie est supérieur à la quantité proposée";
+			header('location:../achat/achat.php');
+		}
+			else
+			{ 
+	?>  
 	<section class="produit_detail">
 		</p>
 		<h1 class="titre_annonce"> 
@@ -37,7 +50,7 @@
 				<strong>Quantité choisie</strong> : <span class="quantite"> <?php echo $_GET['Quantite'];?>Kg </span><br/>
 			</p>
 			<p class="info_prod">
-				<strong>Prix à payer</strong> : <span class="quantite"> <?php echo $_GET['Quantite']*=$donnees['Prix'];?> </span><br/>
+				<strong>Prix à payer</strong> : <span class="quantite"> <?php echo $_GET['Quantite']*=$donnees['Prix'];?>€ </span><br/>
 			</p>				
 		</article>
 
@@ -51,9 +64,13 @@
 			}
 			?>
 
-			<p> <a href="../achat/confirmation_achat.php"> <input type="button" value="Valider" class="bouton_valider"/> </a> </p>
+			<p> <a href="../achat/traitement_achat.php"> <input type="button" value="Valider" class="bouton_valider"/> </a> </p>
 		
 		<?php $reponse->closeCursor();?>
 	
-	<?php include("../invariants/footer.php");?>
+	<?php include("../invariants/footer.php");
 	
+			}	
+	}
+
+?>	
