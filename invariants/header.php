@@ -8,7 +8,7 @@
 		</p>
 	</article>
 	<div id="recherche">
-		<form action="../invariants/traitement_recherche.php" method="post" >
+		<form action="../invariants/traitement_recherche.php" method="POST" >
 			<p>
 				<input type="search" name="recherche" id="Barre" placeholder="Fruits, légumes, ..." size="45" />
 				<input type="submit" value="Rechercher" id="bt_recherche"  >
