@@ -50,7 +50,7 @@ h2
 }
 .info_produit_simple h2
 {
-	font-size: 1.9em;
+	font-size: 1.3em;
 }
 /***************************************************propriétés visuels ***************************************************/
 .liens_invariants:hover
@@ -584,7 +584,7 @@ background-position:50% 50%;
 .titre_categorie
 {
 	position: absolute;
-	left:10px;
+	left:-13px;
 	top:8px;
 }
 .prix_quantite
