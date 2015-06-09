@@ -40,42 +40,26 @@
 			<?php
 			$req=$bdd->prepare('SELECT Echange FROM annonces WHERE id_annonce=?');
 			$req->execute(array($_GET['id_annonce']));
-			$donnees=$req->fetch();
-		
-			if($donnees1['Echange']==1){
-				
-			}
+			$donnees1=$req->fetch();
 			?>
+
 <form name="formulaire_achat" id="formulaire_achat"  method="post" action="../achat/confirmation_achat.php?id_annonce=<?php echo $donnees['id_annonce'];?>">
 			<article class="achat_formulaire">
 				<p>
-				<label for="Quantite"> Choisissez la quantité désirée (kg) :</label> <input type="Int" name="Quantite" id="Quantite" 
+				<label for="Quantite"> Choisissez la quantité désirée (kg) :</label> <input type="Int" name="quantite_voulu" id="Quantite" 
 				required />
 				</p>
+				<input type="hidden" name="quantite_actuelle" value="<?php echo $donnees['Quantite']?>"/>
 			<p> <input type="submit" value="Valider" class="bouton_valider"/> </p>
+			<?php if(isset($_GET['a'])){
+				echo $_GET['a'];
+			} ?>
 		    <article>
 </form>		
 		<?php $reponse->closeCursor();?>
 	
 	<?php include("../invariants/footer.php");?>
 
-<?if(empty($_POST['Quantite']))
-{
-    header('location: ../achat/achat.php');
-}
-	else
-	{
-		max ($donnees['Quantite'],$_POST['Quantite']);
-		if ($_POST['Quantite']>$donnees['Quantite'])
-		{
-			echo "La quantité choisie est supérieur à la quantité proposée";
-		}
-			else
-			{
-				header('location: ../achat/achat.php');
-			}	
-	}
 
-?>	
 </body>	
 </html>

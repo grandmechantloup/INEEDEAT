@@ -7,7 +7,15 @@
 	<link rel="stylesheet" href="../css/style.css" />
 </head>
 <body class="page">
-<?php include("../invariants/header.php");?>
+<?php include("../invariants/header.php");
+
+if ($_POST['quantite_voulu']>$_POST['quantite_actuelle'])
+	{
+			header('location: ../achat/achat.php?id_annonce='.$_GET['id_annonce'].'&a=La quantite demande est superieur à la quantite actuelle');
+	}
+else
+{
+?>	
 <?php require("../bdd/connexion.php"); ?>
 <?php $reponse=$bdd->prepare('SELECT a.Titre, a.Prix, a.Quantite, u.Pseudo, a.id_annonce	
 								  FROM annonces a
@@ -30,24 +38,23 @@
 			<p class="info_prod">
 				<strong>prix</strong> : <span class="prix"><?php echo $donnees['Prix']; ?> €/Kg </span><br/>
 			</p>
+			
 			<p class="info_prod">
-				<strong>Quantité restante</strong> : <span class="quantite"> <?php echo $donnees['Quantite'];?>Kg </span><br/>
+				<strong>Quantité choisie</strong> : <span class="quantite"> <?php echo $_POST['quantite_voulu'];?>Kg </span><br/>
 			</p>
 			<p class="info_prod">
-				<strong>Quantité choisie</strong> : <span class="quantite"> <?php echo $_GET['Quantite'];?>Kg </span><br/>
-			</p>
-			<p class="info_prod">
-				<strong>Prix à payer</strong> : <span class="quantite"> <?php echo $_GET['Quantite']*=$donnees['Prix'];?>€ </span><br/>
+			<?php $Montant=$_POST['quantite_voulu']*$donnees['Prix'];?>
+				<strong>Prix à payer</strong> : <span class="quantite"> <?php echo $Montant;?>€ </span><br/>
 			</p>				
 		</article>
 
+			<p> <a href="../achat/traitement_achat.php?id_annonce=<?php echo $donnees['id_annonce'];?>&amp;Montant=<?php echo $Montant;?>&amp;Quantite=<?php echo $_POST['quantite_voulu'];?>"> <input type="button" value="Valider" class="bouton_valider"/> </a> </p>
 		
+		<?php $reponse->closeCursor();
 
-			<p> <a href="../achat/traitement_achat.php?id_annonce=<?php echo $donnees['id_annonce'];?>"> <input type="button" value="Valider" class="bouton_valider"/> </a> </p>
-		
-		<?php $reponse->closeCursor();?>
-	
-	<?php include("../invariants/footer.php");?>
+	 include("../invariants/footer.php");
+	}
+	?>
 </body>
 </html>	
 	

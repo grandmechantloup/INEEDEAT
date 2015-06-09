@@ -8,11 +8,10 @@ $reponse=$bdd->prepare('SELECT a.Titre, a.Prix, a.Quantite, u.Pseudo, a.id_annon
 	$reponse->execute(array($_GET['id_annonce']));
 	$donnees=$reponse->fetch();
 
-$reponse->closeCursor();
+$reponse->closeCursor();	
 
 
-if (isset($_POST['valider']))
-     { 
+     /* 
      		$req = $bdd->prepare('SELECT Email FROM Utilisateurs WHERE id_utilisateur = '.$donnees['id_utilisateur'].'');
      		$req->bindParam(":Pseudo",$pseudo,PDO::PARAM_STR);
    			$req->execute();
@@ -64,5 +63,25 @@ $message_non_envoye = "Il y a eu un problème lors de la validation de l'achat";
 		else
 		{
           echo '<p>'.$email_eronne.'</p>';
-		}		   
-	 
+          */
+
+$req=$bdd->prepare('INSERT INTO transactions (Acheteur, Montant, id_annonce, Quantite) VALUES (:acheteur, :montant, :id_annonce, :quantite)');
+$req->execute(array(
+'acheteur'=> $_SESSION['pseudo'],
+'montant'=> $_GET['Montant'],
+'id_annonce'=>$_GET['id_annonce'],
+'quantite'=>$_GET['Quantite']));
+
+$req=$bdd->prepare('SELECT Quantite FROM annonces WHERE id_annonce=?');
+$req->execute(array($_GET['id_annonce']));
+$donnees=$req->fetch();
+$quantite_restante=$donnees['Quantite'];
+$quantite_voulu=$_GET['Quantite'];
+$quantite_final=$quantite_restante-$quantite_voulu;
+
+$req->closeCursor();
+
+$req=$bdd->prepare('UPDATE annonces SET Quantite=?');
+$req->execute(array($quantite_final));
+header('location:../accueil/accueil.php');
+?> 
