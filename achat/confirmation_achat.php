@@ -43,7 +43,7 @@
 
 		
 
-			<p> <a href="../achat/traitement_achat.php"> <input type="button" value="Valider" class="bouton_valider"/> </a> </p>
+			<p> <a href="../achat/traitement_achat.php?id_annonce=<?php echo $donnees['id_annonce'];?>"> <input type="button" value="Valider" class="bouton_valider"/> </a> </p>
 		
 		<?php $reponse->closeCursor();?>
 	
