@@ -30,8 +30,8 @@ $reponse->closeCursor();
 
 $email = $donnees1['Email'];
 $message_envoye = "Un mail a été envoyé à".$donnees['Pseudo']."\n";
-$email_expediteur = ($donnees2['Email']);
-$message_non_envoye = "Il y a eu un problème lors de la validation de l'achat"
+$email_expediteur = $donnees2['Email'];
+$message_non_envoye = "Il y a eu un problème lors de la validation de l'achat";
 
 		$objet = "Commande I need eat";
 		$message = "Bonjour cher membre, merci pour votre confiance, vous avez un client pour votre annonce" .$donnees['Titre'].", voici les informations concernant l'acheteur :\n";
@@ -65,4 +65,4 @@ $message_non_envoye = "Il y a eu un problème lors de la validation de l'achat"
 		{
           echo '<p>'.$email_eronne.'</p>';
 		}		   
-	 }
+	 
