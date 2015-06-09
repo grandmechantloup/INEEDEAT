@@ -65,8 +65,8 @@
 			<p>
 				<label for="Civilite"> Civilite:</label><br />
 				<select name="Civilite" id="Civilite">
-					<option value="Monsieur">Monsieur</option>
-					<option value="Madame">Madame</option>
+					<option value="1">Monsieur</option>
+					<option value="0">Madame</option>
 				</select>
 			</p>
 			<p>

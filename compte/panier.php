@@ -12,7 +12,7 @@
 	<?php
 	include("../invariants/header.php");
 	require("../bdd/connexion.php"); 
-	$req=$bdd->prepare('SELECT a.Date_publication, a.Titre, v.Variete, c.Categorie, a.Prix, a.Quantite, a.id_annonce
+	$req=$bdd->prepare('SELECT a.Date_publication, a.Titre, v.Variete, c.Categorie, a.Prix, a.Quantite, a.id_annonce, p.id
 						FROM panier p
 						INNER JOIN annonces a
 						ON a.id_annonce=p.id_annonce
@@ -26,7 +26,7 @@
 	{
 		include("../annonces/produit_simple.php");
 		?>
-		<a href="../suppression/supprimer.php?annonce=<?php echo $donnees['id_annonce']?>"><input type="button" value="Supprimer"/></a>
+		<a href="../suppression/supprimer_panier.php?annonce=<?php echo $donnees['id']?>"><input type="button" value="Supprimer"/></a>
 	<?php
 	}
 	include("../invariants/footer.php");
