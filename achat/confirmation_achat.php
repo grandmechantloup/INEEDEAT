@@ -37,23 +37,17 @@
 				<strong>Quantité choisie</strong> : <span class="quantite"> <?php echo $_GET['Quantite'];?>Kg </span><br/>
 			</p>
 			<p class="info_prod">
-				<strong>Prix à payer</strong> : <span class="quantite"> <?php echo $_GET['Quantite']*=$donnees['Prix'];?> </span><br/>
+				<strong>Prix à payer</strong> : <span class="quantite"> <?php echo $_GET['Quantite']*=$donnees['Prix'];?>€ </span><br/>
 			</p>				
 		</article>
 
-			<?php
-			$req=$bdd->prepare('SELECT Echange FROM annonces WHERE id_annonce=?');
-			$req->execute(array($_GET['id_annonce']));
-			$donnees=$req->fetch();
 		
-			if($donnees[0]==1){
-				
-			}
-			?>
 
-			<p> <a href="../achat/confirmation_achat.php"> <input type="button" value="Valider" class="bouton_valider"/> </a> </p>
+			<p> <a href="../achat/traitement_achat.php"> <input type="button" value="Valider" class="bouton_valider"/> </a> </p>
 		
 		<?php $reponse->closeCursor();?>
 	
 	<?php include("../invariants/footer.php");?>
+</body>
+</html>	
 	
