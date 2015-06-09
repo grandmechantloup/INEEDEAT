@@ -8,7 +8,7 @@
 		if(isset($donnees['Extension_upload']) AND $donnees['Extension_upload']!=NULL)
 		{
 		?>
-			<div class="image" style="background-image:url('../images/images_annonces/<?php echo $donnees['id_annonce'].'.'.$donnees['Extension_upload']; ?>');"></div>
+			<div class="image" style="background-image:url('../images/images_annonces/<?php echo $donnees['id_annonce'].'.'.$donnees['Extension_upload']; ?>');  background-size: contain;"></div>
 		<?php
 		}
 		?>

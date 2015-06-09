@@ -73,8 +73,8 @@
 		$reponse->closeCursor();
 		?>
 		<div class="suivant_precedent">
-			<a href="../offres/offres.php?limit=<?php echo $limit-5;?>"> <input type="button" name="précédent" value="précédent" class="bouton_offres"/> </a>
-			<a href="../offres/offres.php?limit=<?php echo $limit+5;?>"> <input type="button" name="suivant" value="suivant" class="bouton_offres"/> </a>
+			<a href="../offres/fruits.php?limit=<?php echo $limit-5;?>"> <input type="button" name="précédent" value="précédent" class="bouton_offres"/> </a>
+			<a href="../offres/fruits.php?limit=<?php echo $limit+5;?>"> <input type="button" name="suivant" value="suivant" class="bouton_offres"/> </a>
 		</div>
 	</div>
 	<?php include("../invariants/footer.php") ?>
