@@ -2,11 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-  <style rel="stylesheet" type="text/css" href="css/css_footer/style_nous_contacter.css"></style>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
 	<title>Nous contacter</title>
 </head>
-<body>
-
+<body class="page">
+<?php include("../invariants/header.php"); ?>
   <fieldset class="cadre_nous_contacter">
 
     <h1>Nous contacter</h1>
@@ -28,6 +28,6 @@
     </form>
   </fieldset>
       
-
+<?php include("../invariants/footer.php"); ?>
 </body>
 </html>
